@@ -1,0 +1,37 @@
+.hero {
+  height: 80vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("../../../assets//images/meal.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.hero .container {
+  height: 100%;
+  position: relative;
+}
+.hero .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.hero .content p {
+  line-height: 1.7rem;
+  color: var(--gray);
+  font-size:1.3rem;
+}
+.hero .content .hero-btn {
+  margin-right: 1rem;
+}
+.hero .content .hero-buttons {
+  margin-top: 0.5rem;
+}
+.hero .container .large-header {
+  color: var(--white);
+  font-size: 3rem;
+}
+

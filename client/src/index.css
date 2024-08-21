@@ -6,9 +6,33 @@
   font-family: "outfit", sans-serif;
 }
 
+:root {
+  --maroon: #790926;
+  --white: #fff;
+  --redPink:#ff004f;
+  --gray:#ababab;
+}
+
 ul {
   list-style: none;
 }
 a {
   text-decoration: none;
+}
+img {
+  width: 100%;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.hero-btn {
+  background: var(--maroon);
+
+  color: var(--white);
+
+  display: inline-block;
+
+  padding: 0.5rem 2rem;
+  cursor: pointer;
 }

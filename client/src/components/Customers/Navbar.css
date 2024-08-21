@@ -1,0 +1,70 @@
+.nav {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav .container .navigation_menu .nav_ul {
+  display: flex;
+}
+.nav .container .profile-icon img {
+  height: 30px;
+  width: 30px;
+}
+
+.nav .container .navigation_menu .nav_ul li a {
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  transition: all 0.5s;
+}
+.nav .container .navigation_menu .nav_ul li a:hover {
+  transform: scale(1.1);
+}
+.nav .logo-div .logo {
+  color: var(--redPink);
+  font-size: 2rem;
+  font-weight: 600;
+}
+.nav .logo-div .logo span {
+  color: var(--maroon);
+  position: relative;
+  margin-left: 5px;
+}
+.nav .logo-div .logo span::before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: var(--redPink);
+}
+.nav .credential-btn {
+  background: var(--maroon);
+  margin-left: 1rem;
+
+  border: none;
+  border: 2px solid var(--maroon);
+}
+.nav .credential-btn:hover {
+  background: transparent;
+  color: var(--maroon);
+}
+.nav .credential-btn a {
+  color: var(--white);
+  padding: 0.6rem 3rem;
+  display:block;
+}
+.nav .credential-btn:hover a {
+  color: var(--maroon);
+}
+
+.nav .container .navigation_menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
