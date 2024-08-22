@@ -1,0 +1,68 @@
+.authentication-container.login {
+  height: 100vh;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.authentication-container.login form {
+  max-width: 650px;
+
+  width: 100%;
+
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  padding:2rem 1rem 2rem 1rem;
+}
+
+.authentication-container.login .container {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-direction: column;
+}
+
+.authentication-container form input {
+  width: 100%;
+
+  height: 40px;
+
+  border: none;
+
+  padding: 10px;
+
+  outline: none;
+
+  cursor: pointer;
+}
+.authentication-container.login .input-group {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border-bottom: 1px solid var(--faintGray);
+
+  margin-bottom: 1.5rem;
+}
+.authentication-container.login .input-group p {
+  font-size: 1.4rem;
+}
+
+.authentication-container .input_group {
+  width: 100%;
+}
+.authentication-container .input-group p {
+  color: var(--colorGreen);
+}

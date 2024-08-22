@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .nav .container .navigation_menu .nav_ul {
   display: flex;
@@ -14,19 +15,19 @@
   width: 30px;
 }
 
-.nav .container .navigation_menu .nav_ul li a {
+.nav .container .navigation_menu .nav_ul p a {
   padding: 0.7rem 1rem;
   cursor: pointer;
   position: relative;
   display: block;
   transition: all 0.5s;
 }
-.nav .container .navigation_menu .nav_ul li a:hover {
+.nav .container .navigation_menu .nav_ul p a:hover {
   transform: scale(1.1);
 }
 .nav .logo-div .logo {
   color: var(--redPink);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 .nav .logo-div .logo span {
@@ -57,7 +58,7 @@
 .nav .credential-btn a {
   color: var(--white);
   padding: 0.6rem 3rem;
-  display:block;
+  display: block;
 }
 .nav .credential-btn:hover a {
   color: var(--maroon);
@@ -67,4 +68,83 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.nav .container .profile-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.nav .container .profile-icon .credential-buttons.mobile {
+  display: flex;
+  margin-right: 1rem;
+}
+.nav .container .profile-icon .credential-buttons.mobile button {
+  width: 80px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.nav .container .menu-icon p {
+  font-size: 2.3rem;
+  cursor: pointer;
+}
+.nav .container .menu-icon {
+  margin-left: 1rem;
+  color: var(--redPink);
+  transition: all 0.5s;
+  display: none;
+}
+.nav .container .menu-icon:hover {
+  transform: scale(1.1);
+}
+@media (min-width: 850px) {
+  .nav .container .profile-icon .credential-buttons.mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .nav .container .navigation_menu {
+    position: absolute;
+    background: var(--white);
+    top: 100%;
+    left: -100%;
+    z-index: 99;
+    width: 250px;
+    height: calc(100vh - 50px);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    transition: all 0.5s;
+  }
+  .nav .container .navigation_menu.active {
+    left: 0;
+  }
+  .nav .container .menu-icon {
+    display: initial;
+  }
+  .nav .container .navigation_menu .nav_ul {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  .nav .container .navigation_menu .nav_ul p {
+    cursor: pointer;
+    text-align: center;
+  }
+  .nav .container .navigation_menu .nav_ul p a {
+    color: var(--black);
+  }
+  .nav .container .credential-buttons.desktop {
+    display: none;
+  }
+  .nav .container .navigation_menu .nav_ul p:hover {
+    background: #ff004f;
+    width: 100%;
+  }
+  .nav .container .navigation_menu .nav_ul p:hover a {
+    color: var(--white);
+  }
 }

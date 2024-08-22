@@ -9,8 +9,12 @@
 :root {
   --maroon: #790926;
   --white: #fff;
-  --redPink:#ff004f;
-  --gray:#ababab;
+  --redPink: #ff004f;
+  --gray: #ababab;
+  --black: #000;
+  --faintGray: #999;
+  --submitButtonColor: #2a209e;
+  --colorGreen:#209e20;
 }
 
 ul {
@@ -25,6 +29,7 @@ img {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 .hero-btn {
   background: var(--maroon);
@@ -35,4 +40,23 @@ img {
 
   padding: 0.5rem 2rem;
   cursor: pointer;
+}
+.submit-btn {
+  background: var(--submitButtonColor);
+
+  color:var(--white);
+
+  font-weight:600px;
+
+}
+
+.auth-forms-title{
+
+  font-size:2.1rem;
+
+  font-weight:600;
+
+
+  color:var(--maroon);
+
 }

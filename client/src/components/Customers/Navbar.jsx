@@ -2,7 +2,17 @@ import "./Navbar.css";
 
 import Profile from "../../assets/icons/profile.png";
 
+import { Link } from "react-router-dom";
+
+import { useState } from "react";
+
 const Navbar = () => {
+  const [sidebar, showSidebar] = useState(false);
+
+  const handleSidebar = () => {
+    showSidebar(!sidebar);
+  };
+
   return (
     <div className="nav">
       <div className="container">
@@ -11,32 +21,45 @@ const Navbar = () => {
             Shoppi<span>en</span>
           </a>
         </div>
-        <div className="navigation_menu">
-          <ul className="nav_ul">
-            <li className="nav_li">
-              <a href="#">Home</a>
-            </li>
-            <li className="nav_li">
-              <a href="#">Products</a>
-            </li>
-            <li className="nav_li">
-              <a href="#">Cart</a>
-            </li>
-            <li className="nav_li">
-              <a href="#">Checkout</a>
-            </li>
-          </ul>
-          <div className="credential-buttons">
+        <div className={`navigation_menu ${sidebar ? "active" : null}`}>
+          <div className="nav_ul">
+            <p className="nav_li">
+              <Link to="/">Home</Link>
+            </p>
+            <p className="nav_li">
+              <Link to="#">Products</Link>
+            </p>
+            <p className="nav_li">
+              <Link to="/customer/cart">Cart</Link>
+            </p>
+            <p className="nav_li">
+              <Link to="/customer/checkout">Checkout</Link>
+            </p>
+          </div>
+          <div className="credential-buttons desktop">
             <button className="credential-btn">
-              <a href="#">Signup</a>
+              <Link to="/authentication/signup">Signup</Link>
             </button>
             <button className="credential-btn">
-              <a href="#">Login</a>
+              <Link to="/authentication/login">Login</Link>
             </button>
           </div>
         </div>
         <div className="profile-icon">
-          <img src={Profile} alt="profile-icon" />
+          <div className="credential-buttons mobile">
+            <button className="credential-btn">
+              <Link to="/authentication/signup">Signup</Link>
+            </button>
+            <button className="credential-btn">
+              <Link to="/authentication/login">Login</Link>
+            </button>
+          </div>
+          <Link to="/account/profile">
+            <img src={Profile} alt="profile-icon" />
+          </Link>
+          <div className="menu-icon">
+            <p onClick={handleSidebar}>&#9776;</p>
+          </div>
         </div>
       </div>
     </div>
