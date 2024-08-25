@@ -45,20 +45,17 @@
   background: var(--redPink);
 }
 .nav .credential-btn {
-  background: var(--maroon);
-  margin-left: 1rem;
-
   border: none;
-  border: 2px solid var(--maroon);
+  width: 100px;
+  padding: 0.4rem;
+  background: var(--maroon);
+  color: var(--white);
+  cursor: pointer;
+  margin-left: 10px;
 }
 .nav .credential-btn:hover {
-  background: transparent;
-  color: var(--maroon);
 }
 .nav .credential-btn a {
-  color: var(--white);
-  padding: 0.6rem 3rem;
-  display: block;
 }
 .nav .credential-btn:hover a {
   color: var(--maroon);
@@ -77,23 +74,18 @@
   text-align: center;
 }
 .nav .container .profile-icon .credential-buttons.mobile {
-  display: flex;
   margin-right: 1rem;
 }
-.nav .container .profile-icon .credential-buttons.mobile button {
-  width: 80px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  text-align: center;
+.nav .container .profile-icon .credential-buttons.mobile a {
+  display: block;
 }
 
 .nav .container .menu-icon button {
   font-size: 2.3rem;
   cursor: pointer;
-  background:transparent;
-  border:none;
-  color:var(--redPink);
+  background: transparent;
+  border: none;
+  color: var(--redPink);
 }
 .nav .container .menu-icon {
   margin-left: 1rem;
@@ -103,6 +95,9 @@
 }
 .nav .container .menu-icon:hover {
   transform: scale(1.1);
+}
+.nav .container .credential-buttons.mobile {
+  display: none;
 }
 @media (min-width: 850px) {
   .nav .container .profile-icon .credential-buttons.mobile {
@@ -116,11 +111,12 @@
     background: var(--white);
     top: 100%;
     left: -100%;
-    z-index: 99;
+    z-index: 9;
     width: 250px;
     height: calc(100vh - 50px);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     transition: all 0.5s;
+    z-index: 99;
   }
   .nav .container .navigation_menu.active {
     left: 0;
@@ -150,16 +146,27 @@
   .nav .container .navigation_menu .nav_ul p:hover a {
     color: var(--white);
   }
-}
-
-
-@media(max-width:382px){
-
   .nav .container .profile-icon .credential-buttons.mobile {
-    display:flex;
-    position:absolute;
-    top:100%;
-    right:0;
+    position: absolute;
+    display: flex;
+    right: 0;
+    top: 100%;
   }
 
+  .nav .container .credential-buttons.mobile {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 100%;
+    z-index: 9;
+  }
+  .nav .container .credential-buttons.mobile .credential-btn {
+    height: 40px;
+    border: 2px solid var(--maroon);
+    transition: all 0.5s;
+  }
+  .nav .container .credential-buttons.mobile .credential-btn:hover {
+    background: transparent;
+    color: var(--maroon);
+  }
 }

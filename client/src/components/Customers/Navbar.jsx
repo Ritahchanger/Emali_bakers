@@ -37,29 +37,31 @@ const Navbar = () => {
             </p>
           </div>
           <div className="credential-buttons desktop">
-            <button className="credential-btn">
-              <Link to="/authentication/signup">Signup</Link>
-            </button>
-            <button className="credential-btn">
-              <Link to="/authentication/login">Login</Link>
-            </button>
+            <Link to="/authentication/signup">
+              <button className="credential-btn">Signup</button>
+            </Link>
+
+            <Link to="/authentication/login">
+              <button className="credential-btn">Login</button>
+            </Link>
           </div>
         </div>
         <div className="profile-icon">
-          <div className="credential-buttons mobile">
-            <button className="credential-btn">
-              <Link to="/authentication/signup">Signup</Link>
-            </button>
-            <button className="credential-btn">
-              <Link to="/authentication/login">Login</Link>
-            </button>
-          </div>
           <Link to="/account/profile">
             <img src={Profile} alt="profile-icon" />
           </Link>
           <div className="menu-icon">
             <button onClick={handleSidebar}>&#9776;</button>
           </div>
+        </div>
+
+        <div className="credential-buttons mobile">
+          <Link to="/authentication/signup">
+            <button className="credential-btn">Signup</button>
+          </Link>
+          <Link to="/authentication/login">
+            <button className="credential-btn">Login</button>
+          </Link>
         </div>
       </div>
     </div>
