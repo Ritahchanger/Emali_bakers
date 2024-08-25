@@ -1,6 +1,9 @@
+.featured_products .small-header{
+  margin-top:2rem;
+}
 .featured_products .medium-header {
-  margin: 1rem;
   color: var(--redPink);
+  
 }
 .featured_products .products-grid {
   display: grid;

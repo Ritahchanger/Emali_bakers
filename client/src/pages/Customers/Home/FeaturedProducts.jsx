@@ -12,7 +12,8 @@ const FeaturedProducts = () => {
   return (
     <div className="featured_products">
       <div className="container">
-        <p className="medium-header">FEATURED PRODUCTS</p>
+        <p className="small-header">Products</p>
+        <p className="medium-header">Featured</p>
         <div className="products-grid">
           <div className="card">
             <div className="img-wrapper">
