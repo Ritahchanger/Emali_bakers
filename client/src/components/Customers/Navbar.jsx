@@ -58,7 +58,7 @@ const Navbar = () => {
             <img src={Profile} alt="profile-icon" />
           </Link>
           <div className="menu-icon">
-            <p onClick={handleSidebar}>&#9776;</p>
+            <button onClick={handleSidebar}>&#9776;</button>
           </div>
         </div>
       </div>
