@@ -17,7 +17,19 @@
   --colorGreen: #209e20;
   --mobileFont: 13px;
 }
-
+::-webkit-scrollbar {
+  width: 3px;
+  height: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 ul {
   list-style: none;
 }
@@ -61,6 +73,7 @@ img {
 .medium-header {
   color: var(--maroon);
   text-align: center;
+  font-size:2rem;
 }
 
 .food-name {

@@ -148,3 +148,15 @@
     color: var(--white);
   }
 }
+
+
+@media(max-width:382px){
+
+  .nav .container .profile-icon .credential-buttons.mobile {
+    display:flex;
+    position:absolute;
+    top:100%;
+    right:0;
+  }
+
+}

@@ -12,7 +12,7 @@ const FeaturedProducts = () => {
   return (
     <div className="featured_products">
       <div className="container">
-        <h2 className="medium-header">FEATURED PRODUCTS</h2>
+        <p className="medium-header">FEATURED PRODUCTS</p>
         <div className="products-grid">
           <div className="card">
             <div className="img-wrapper">
