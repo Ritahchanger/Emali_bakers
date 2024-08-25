@@ -17,12 +17,8 @@ const Hero = () => {
             neque.
           </p>
           <div className="hero-buttons">
-            <a href="#" className="hero-btn">
-              Order Now
-            </a>
-            <a href="#" className="hero-btn">
-              Browse Menu
-            </a>
+            <button className="hero-btn">Order Now</button>
+            <button className="hero-btn">Browse Menu</button>
           </div>
         </div>
       </div>

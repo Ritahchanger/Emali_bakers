@@ -17,15 +17,26 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
+  width: 90%;
 }
 .hero .content p {
   line-height: 1.7rem;
   color: var(--gray);
-  font-size:1.3rem;
+  font-size: 1.3rem;
 }
 .hero .content .hero-btn {
   margin-right: 1rem;
+  border: none;
+  transition: all 0.5s;
+  border:2px solid var(--maroon);
+  width:120px;
+  font-size:12px;
+  padding:0.5rem 0rem;
+}
+.hero .content .hero-btn:hover {
+  cursor: pointer;
+  background: transparent;
+  border:2px solid var(--maroon)
 }
 .hero .content .hero-buttons {
   margin-top: 0.5rem;
@@ -35,3 +46,16 @@
   font-size: 3rem;
 }
 
+@media (max-width: 484px) {
+  .hero {
+    height: 100vh;
+  }
+}
+@media (max-width: 372px) {
+  .hero .content p {
+    font-size: 1.2rem;
+  }
+  .hero .container .large-header {
+    font-size: 2.5rem;
+  }
+}
