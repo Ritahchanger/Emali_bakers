@@ -4,7 +4,9 @@
   width: 100%;
 
   display: flex;
+
   justify-content: center;
+
   align-items: center;
 }
 
@@ -14,7 +16,8 @@
   width: 100%;
 
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-  padding:2rem 1rem 2rem 1rem;
+
+  padding: 2rem 1rem 2rem 1rem;
 }
 
 .authentication-container.login .container {

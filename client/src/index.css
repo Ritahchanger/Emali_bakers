@@ -14,7 +14,8 @@
   --black: #000;
   --faintGray: #999;
   --submitButtonColor: #2a209e;
-  --colorGreen:#209e20;
+  --colorGreen: #209e20;
+  --mobileFont: 13px;
 }
 
 ul {
@@ -44,19 +45,33 @@ img {
 .submit-btn {
   background: var(--submitButtonColor);
 
-  color:var(--white);
+  color: var(--white);
 
-  font-weight:600px;
-
+  font-weight: 600px;
 }
 
-.auth-forms-title{
+.auth-forms-title {
+  font-size: 2.1rem;
 
-  font-size:2.1rem;
+  font-weight: 600;
 
-  font-weight:600;
+  color: var(--maroon);
+}
 
+.medium-header {
+  color: var(--maroon);
+  text-align: center;
+}
 
-  color:var(--maroon);
+.food-name {
+  font-size: var(--mobileFont);
+  font-weight: 600;
+  color: var(--submitButtonColor);
+}
+.price {
+  font-size: var(--mobileFont);
+}
 
+img {
+  width: 100%;
 }
