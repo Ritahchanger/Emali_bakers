@@ -16,6 +16,7 @@
   --submitButtonColor: #2a209e;
   --colorGreen: #209e20;
   --mobileFont: 13px;
+  --header3:#212ea0;
 }
 ::-webkit-scrollbar {
   width: 3px;
@@ -96,7 +97,7 @@ img {
 }
 .small-header {
   text-align: center;
-  color: var(--submitButtonColor);
+  color: var(--header3);
   font-weight: 600;
   font-size: 1.3rem;
 }
