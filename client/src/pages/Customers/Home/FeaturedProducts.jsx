@@ -8,6 +8,7 @@ import TestingImage5 from "../../../assets/images/assets/food_5.png";
 import TestingImage6 from "../../../assets/images/assets/food_6.png";
 import TestingImage7 from "../../../assets/images/assets/food_7.png";
 import TestingImage8 from "../../../assets/images/assets/food_8.png";
+import { Link } from "react-router-dom";
 const FeaturedProducts = () => {
   return (
     <div className="featured_products">
@@ -22,7 +23,9 @@ const FeaturedProducts = () => {
             <div className="card-body">
               <p className="food-name">Hamburger</p>
               <p className="price">$3.23</p>
-              <button>view</button>
+              <Link to="/account/product/1">
+                <button>view</button>
+              </Link>
             </div>
           </div>
           <div className="card">
@@ -32,7 +35,9 @@ const FeaturedProducts = () => {
             <div className="card-body">
               <p className="food-name">Hamburger</p>
               <p className="price">$3.23</p>
-              <button>view</button>
+              <Link to="/account/product/1">
+                <button>view</button>
+              </Link>
             </div>
           </div>
           <div className="card">
@@ -42,7 +47,9 @@ const FeaturedProducts = () => {
             <div className="card-body">
               <p className="food-name">Hamburger</p>
               <p className="price">$3.23</p>
-              <button>view</button>
+              <Link to="/account/product/1">
+                <button>view</button>
+              </Link>
             </div>
           </div>
           <div className="card">
@@ -52,7 +59,9 @@ const FeaturedProducts = () => {
             <div className="card-body">
               <p className="food-name">Hamburger</p>
               <p className="price">$3.23</p>
-              <button>view</button>
+              <Link to="/account/product/1">
+                <button>view</button>
+              </Link>
             </div>
           </div>
           <div className="card">
@@ -62,7 +71,9 @@ const FeaturedProducts = () => {
             <div className="card-body">
               <p className="food-name">Hamburger</p>
               <p className="price">$3.23</p>
-              <button>view</button>
+              <Link to="/account/product/1">
+                <button>view</button>
+              </Link>
             </div>
           </div>
           <div className="card">
@@ -72,7 +83,9 @@ const FeaturedProducts = () => {
             <div className="card-body">
               <p className="food-name">Hamburger</p>
               <p className="price">$3.23</p>
-              <button>view</button>
+              <Link to="/account/product/1">
+                <button>view</button>
+              </Link>
             </div>
           </div>
           <div className="card">
@@ -82,7 +95,9 @@ const FeaturedProducts = () => {
             <div className="card-body">
               <p className="food-name">Hamburger</p>
               <p className="price">$3.23</p>
-              <button>view</button>
+              <Link to="/account/product/1">
+                <button>view</button>
+              </Link>
             </div>
           </div>
           <div className="card">
@@ -92,7 +107,9 @@ const FeaturedProducts = () => {
             <div className="card-body">
               <p className="food-name">Hamburger</p>
               <p className="price">$3.23</p>
-              <button>view</button>
+              <Link to="/account/product/1">
+                <button>view</button>
+              </Link>
             </div>
           </div>
         </div>

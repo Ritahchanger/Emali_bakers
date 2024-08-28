@@ -97,3 +97,11 @@
   }
 
 }
+
+
+.authentication-container.signup .row .input-group input:focus{
+  border:1px solid var(--maroon);
+}
+.authentication-container.signup .row .input-group select:focus{
+  border:1px solid var(--maroon);
+}

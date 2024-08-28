@@ -14,6 +14,8 @@ import Signup from "./components/Authentication/Signup";
 
 import Profile from "./pages/Customers/Profile/Profile";
 
+import ProductPage from "./pages/Customers/Product/ProductPage";
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -24,6 +26,7 @@ const App = () => {
         <Route path="/authentication/login" element={<Login />} />
         <Route path="/authentication/signup" element={<Signup />} />
         <Route path="/account/profile" element={<Profile />} />
+        <Route path="/account/product/1" element={<ProductPage />} />
       </Routes>
     </BrowserRouter>
   );
