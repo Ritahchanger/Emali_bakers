@@ -4,6 +4,8 @@ import "./Authentication.css";
 
 import "./Signup.css";
 
+import { Link } from "react-router-dom";
+
 const Signup = () => {
   return (
     <div className="authentication-container signup">
@@ -110,7 +112,31 @@ const Signup = () => {
               </div>
             </div>
           </div>
+          <div className="section">
+            <p>DELIVERY INFORMATION</p>
+            <div className="row">
+              <div className="input-group">
+                <select name="days">
+                  <option value="">Which day you prefer</option>
+                  <option value="monday">MONDAY</option>
+                  <option value="tuesday">TUESDAY</option>
+                  <option value="wednesday">WEDNESDAY</option>
+                  <option value="thursday">THURSDAY</option>
+                  <option value="friday">FRIDAY</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
           <input type="submit" value="SUBMIT" />
+          <div className="formFooter">
+            <p>
+              <Link to="#">Forgot password?</Link>
+            </p>
+            <p>
+              Have an account?<Link to="/authentication/login">Login</Link>
+            </p>
+          </div>
         </form>
       </div>
     </div>
