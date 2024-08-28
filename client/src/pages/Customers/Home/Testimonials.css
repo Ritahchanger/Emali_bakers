@@ -1,3 +1,24 @@
 .testmonials{
     padding-top:3rem;
 }
+.testmonials .medium-header{
+    color:var(--redPink);
+}
+.testmonials .testimonials-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-gap:1rem;
+}
+.testmonials .testimonials-grid .testmonial-card .img-wrapper{
+    width:60px;
+    height:60px;
+}
+.testmonials .testimonials-grid .testmonial-card{
+    box-shadow:0 0 5px rgba(0,0,0,0.25);
+    padding:10px;
+}
+.testmonials .testimonials-grid .testmonial-header{
+    display:flex;
+
+    justify-content:space-between;
+}

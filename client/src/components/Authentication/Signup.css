@@ -1,0 +1,99 @@
+.authentication-container.signup .auth-forms-title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.authentication-container.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.authentication-container {
+  max-width: 1300px;
+}
+.authentication-container p {
+  font-size: 0.9rem;
+  margin: 1rem 0rem;
+}
+.authentication-container.signup form {
+  max-width: 1200px;
+}
+.authentication-container.signup .section {
+  width: 100%;
+}
+.authentication-container.signup .row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.authentication-container.signup .row .input-group {
+  flex-basis: calc(33.33% - 10px);
+  margin: 10px 0rem;
+}
+
+.authentication-container.signup .row .input-group input {
+  width: 100%;
+  border: 1px solid #ababab;
+}
+
+.authentication-container.signup .row .input-group select {
+  height: 40px;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #ababab;
+  background: transparent;
+}
+
+.authentication-container.signup .row.rich {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.authentication-container input[type="submit"] {
+  background: var(--maroon);
+  color: var(--white);
+}
+
+@media (max-width: 668px) {
+  .authentication-container.signup .row.rich {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .authentication-container.signup {
+    padding: 0;
+  }
+}
+@media (max-width: 554px) {
+  .authentication-container.signup .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 400px) {
+  .authentication-container.signup .auth-forms-title {
+    font-size: 1.3rem;
+  }
+  .authentication-container.signup .row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .authentication-container form p {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    border-bottom:1px solid var(--maroon);
+  }
+  .authentication-container.signup .row.rich {
+    grid-template-columns: repeat(1, 1fr);
+  }
+ 
+  .authentication-container.signup{
+    padding:0;
+    margin-top:2rem;
+   
+  }
+  .authentication-container.signup .container{
+    width:100%;
+  }
+
+}
