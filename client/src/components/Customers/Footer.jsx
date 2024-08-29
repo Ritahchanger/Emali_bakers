@@ -1,6 +1,6 @@
 import React from "react";
 import FooterData from "./FooterData";
-import "./Footer.css"
+import "./Footer.css";
 const Footer = () => {
   return (
     <footer className="footer">
@@ -16,6 +16,19 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
+              {section.id === 4 && (
+                <div className="news-letter">
+                  <div className="input-group">
+                    <input
+                      type="text"
+                      name="#"
+                      id=""
+                      placeholder="Enter your email..."
+                    />
+                  </div>
+                  <input type="submit" value="SUBMIT" />
+                </div>
+              )}
             </section>
           ))}
         </div>
