@@ -72,17 +72,29 @@
   .footer .footer-content > .footer-section:nth-child(4) {
     grid-column: 1 / -1;
   }
+  .footer .footer-content > .footer-section:nth-child(4) .footer-list-item {
+    text-align: center;
+  }
   .footer .footer-content > .footer-section:nth-child(3) {
     grid-column: 1 / -1;
   }
+  .footer .footer-content > .footer-section:nth-child(3) .footer-title {
+    text-align: center;
+  }
+  .footer .footer-content > .footer-section:nth-child(3) .footer-list-item {
+    text-align: center;
+  }
+  .footer .footer-content > .footer-section:nth-child(4) .footer-title {
+    text-align:center;
+  }
   .footer .footer-title {
     color: #fff;
-    text-align:start;
+    text-align: start;
   }
-  .footer li{
-    text-align:start;
+  .footer li {
+    text-align: start;
   }
-  .footer .footer-content .footer-list-item{
-    text-align:start;
+  .footer .footer-content .footer-list-item {
+    text-align: start;
   }
 }

@@ -1,7 +1,7 @@
 const FooterData = [
   {
     id: 1,
-    title: "Increase Your Traffic",
+    title: "Increase Traffic",
     data: [
       {
         info: "Add software",
@@ -19,7 +19,7 @@ const FooterData = [
   },
   {
     id: 2,
-    title: "Enhance Your Security",
+    title: "Enhance  Security",
     data: [
       {
         info: "Firewall Setup",
@@ -37,7 +37,7 @@ const FooterData = [
   },
   {
     id: 3,
-    title: "Boost Your Sales",
+    title: "Boost Sales",
     data: [
       {
         info: "Email Marketing",
@@ -55,7 +55,7 @@ const FooterData = [
   },
   {
     id: 4,
-    title: "Improve Customer Experience",
+    title: "Improve Experience",
     data: [
       {
         info: "Live Chat Support",
