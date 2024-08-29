@@ -8,6 +8,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+  margin-bottom:1.3rem;
 }
 .footer .footer-content .footer-list-item {
   margin: 0.5rem 0rem;

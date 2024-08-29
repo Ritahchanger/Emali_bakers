@@ -1,6 +1,7 @@
 import React from "react";
 import FooterData from "./FooterData";
 import "./Footer.css";
+import SocialMediaIcons from "./SocialMedia";
 const Footer = () => {
   return (
     <footer className="footer">
@@ -31,6 +32,10 @@ const Footer = () => {
               )}
             </section>
           ))}
+        </div>
+        <hr />
+        <div className="footer-container">
+          <SocialMediaIcons />
         </div>
       </div>
     </footer>

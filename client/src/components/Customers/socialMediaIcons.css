@@ -1,0 +1,24 @@
+.social-media-icons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.3rem;
+  max-width: 380px;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+.social-media-icons a {
+  color: var(--white);
+  display: flex;
+  height: 45px;
+  width: 45px;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid var(--maroon);
+  font-size: 12px;
+  align-items: center;
+  border-radius: 50%;
+}
+.social-media-icons a:hover {
+  border: 2px solid var(--white);
+  box-shadow: 0 0 5px var(--white), 0 0 10px var(--white), 0 0 20px var(--white);
+}
