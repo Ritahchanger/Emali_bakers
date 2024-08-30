@@ -16,7 +16,8 @@
   --submitButtonColor: #2a209e;
   --colorGreen: #209e20;
   --mobileFont: 13px;
-  --header3:#212ea0;
+  --header3: #212ea0;
+  --darkGray: #676767;
 }
 ::-webkit-scrollbar {
   width: 3px;
@@ -44,7 +45,7 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
-  position:relative;
+  position: relative;
 }
 .hero-btn {
   background: var(--maroon);
@@ -87,9 +88,32 @@ img {
 .price {
   font-size: var(--mobileFont);
 }
+.card button {
+  border: none;
+  width: 100px;
+  padding: 0.3rem;
+  background: var(--maroon);
+  color: var(--white);
+  cursor: pointer;
+  border: 2px solid var(--maroon);
+  transition: all 0.5s;
+}
+.card button:hover {
+  background: transparent;
+  color: var(--maroon);
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
 
-input,select{
-  width:100%;
+input,
+select {
+  width: 100%;
 }
 
 img {

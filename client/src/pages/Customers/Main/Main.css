@@ -1,0 +1,22 @@
+.main {
+  margin-top: 3rem;
+}
+.main .small-header {
+  border-bottom: 1px solid var(--header3);
+}
+.main .container .row {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  /* align-items: center; */
+}
+.main .container .category {
+  flex-basis: 300px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+}
+.main .container .all-items {
+  flex-basis: calc(100% - 315px);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+}

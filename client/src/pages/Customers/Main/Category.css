@@ -1,0 +1,13 @@
+.main-container .row .col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.main-container .row {
+  padding: 1rem 10px;
+  border-bottom: 1px solid var(--darkGray);
+}
+.main-container .row p {
+  margin-left: 1rem;
+}
