@@ -5,9 +5,7 @@ const Main = () => {
   return (
     <div className="main">
       <div className="container">
-      <div className="medium-header mobile">
-        All items
-      </div>
+        <p className="medium-header mobile">All items</p>
         <div className="row">
           <Category />
           <AllItems />

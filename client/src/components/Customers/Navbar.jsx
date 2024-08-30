@@ -29,6 +29,11 @@ const Navbar = () => {
             <p className="nav_li">
               <Link to="#">Products</Link>
             </p>
+
+            <p className="nav_li mobile">
+              <Link to="/customer/cart">Category</Link>
+            </p>
+
             <p className="nav_li">
               <Link to="/customer/cart">Cart</Link>
             </p>

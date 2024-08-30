@@ -99,6 +99,9 @@
 .nav .container .credential-buttons.mobile {
   display: none;
 }
+.nav .container .nav_li.mobile {
+  display: none;
+}
 @media (min-width: 850px) {
   .nav .container .profile-icon .credential-buttons.mobile {
     display: none;
@@ -128,6 +131,9 @@
     flex-direction: column;
     height: 100%;
     width: 100%;
+  }
+  .nav .container .navigation_menu .nav_ul .nav_li {
+    border-bottom: 1px solid var(--maroon);
   }
   .nav .container .navigation_menu .nav_ul p {
     cursor: pointer;
@@ -168,5 +174,11 @@
   .nav .container .credential-buttons.mobile .credential-btn:hover {
     background: transparent;
     color: var(--maroon);
+  }
+}
+
+@media (max-width: 716px) {
+  .nav .container .nav_li.mobile {
+    display: initial;
   }
 }
