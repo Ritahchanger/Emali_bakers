@@ -1,5 +1,6 @@
 .testimonials {
   padding-top: 3rem;
+
 }
 .testimonials .medium-header {
   color: var(--redPink);
@@ -10,6 +11,9 @@
 }
 .testimonials .testimonials-grid {
   margin-top: 2rem;
+  padding:0;
+  width:100%;
+  padding:1rem;
 }
 
 .testimonials .testimonials-grid .testimonial-card .img-wrapper {
