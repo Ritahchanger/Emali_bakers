@@ -12,7 +12,7 @@ const AllItems = () => {
   return (
     <div className="all-items">
       <div className="row">
-        <p className="small-header">All Items</p>
+        <p className="small-header mobile">All Items</p>
         <div className="filter-container">
           <p className="small-header">Filter</p>
           <select name="filter" id="">

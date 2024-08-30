@@ -11,3 +11,10 @@
 .main-container .row p {
   margin-left: 1rem;
 }
+
+@media (max-width: 830px) {
+  .main-container .row p {
+    margin-left: 0.5rem;
+    font-size: 12px;
+  }
+}
