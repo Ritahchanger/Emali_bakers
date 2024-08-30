@@ -5,16 +5,18 @@ import FeaturedProducts from "./FeaturedProducts";
 import Testimonials from "./Testimonials";
 import Footer from "../../../components/Customers/Footer";
 import Main from "../Main/Main";
+import NavigateTop from "../../../components/NavigateTop";
 const Home = () => {
   return (
-    <Fragment>
+    <div className="home">
       <Navbar />
       <Hero />
       <FeaturedProducts />
       <Main />
       <Testimonials />
+      <NavigateTop />
       <Footer />
-    </Fragment>
+    </div>
   );
 };
 

@@ -6,6 +6,9 @@
   font-family: "outfit", sans-serif;
 }
 
+body{
+  position: relative;
+}
 :root {
   --maroon: #790926;
   --white: #fff;
@@ -124,4 +127,13 @@ img {
   color: var(--header3);
   font-weight: 600;
   font-size: 1.3rem;
+}
+
+.arrow-icon{
+  width:50px;
+  position:fixed;
+  top:calc(100vh - 200px);
+  right:100px;
+  z-index:99;
+  cursor: pointer;
 }
