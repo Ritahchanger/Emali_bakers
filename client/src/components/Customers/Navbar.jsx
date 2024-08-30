@@ -6,6 +6,16 @@ import { Link } from "react-router-dom";
 
 import { useState } from "react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faHome,
+  faBoxOpen,
+  faThList,
+  faCreditCard,
+  faShoppingCart,
+} from "@fortawesome/free-solid-svg-icons";
+
 const Navbar = () => {
   const [sidebar, showSidebar] = useState(false);
 
@@ -24,21 +34,48 @@ const Navbar = () => {
         <div className={`navigation_menu ${sidebar ? "active" : null}`}>
           <div className="nav_ul">
             <p className="nav_li">
-              <Link to="/">Home</Link>
+              <Link to="/">
+                {" "}
+                <span className="icon">
+                  {" "}
+                  <FontAwesomeIcon icon={faHome} size="2x" />
+                </span>
+                <span className="icon-name"> Home</span>
+              </Link>
             </p>
             <p className="nav_li">
-              <Link to="#">Products</Link>
+              <Link to="#">
+                <span className="icon">
+                  <FontAwesomeIcon icon={faBoxOpen} size="2x" />
+                </span>
+                <span className="icon-name">Products</span>
+              </Link>
             </p>
 
             <p className="nav_li mobile">
-              <Link to="/customer/cart">Category</Link>
+              <Link to="/customer/cart">
+                <span className="icon">
+                  <FontAwesomeIcon icon={faThList} size="2x" />
+                </span>
+                <span className="icon-name">Category</span>
+              </Link>
             </p>
 
             <p className="nav_li">
-              <Link to="/customer/cart">Cart</Link>
+              <Link to="/customer/cart">
+                <span className="icon">
+                  <FontAwesomeIcon icon={faShoppingCart} size="2x" />
+                </span>
+                <span className="icon-name">Cart</span>
+              </Link>
             </p>
             <p className="nav_li">
-              <Link to="/customer/checkout">Checkout</Link>
+              <Link to="/customer/checkout">
+                <span className="icon">
+                  <FontAwesomeIcon icon={faCreditCard} size="2x" />
+                </span>
+                <span className="icon-name">Checkout</span>
+              </Link>
             </p>
           </div>
           <div className="credential-buttons desktop">
