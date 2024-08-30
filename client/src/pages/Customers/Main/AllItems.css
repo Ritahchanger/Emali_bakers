@@ -1,5 +1,14 @@
 .all-items .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap:10px;
+  gap: 10px;
+}
+.all-items .filter-container {
+    display:flex;
+    align-items:baseline;
+} 
+.all-items .filter-container select{
+    margin-left:1rem;
+    border:none;
+    height:40px;
 }
