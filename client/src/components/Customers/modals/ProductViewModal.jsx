@@ -6,6 +6,8 @@ import ReactMarkdown from "react-markdown";
 
 import remarkGfm from "remark-gfm";
 
+import ProductImageModal from "./ProductImageModal";
+
 const ProductViewModal = () => {
   const content = `
  # 🍔 Classic Hamburger
@@ -79,6 +81,7 @@ Our Classic Hamburger is a simple yet flavorful choice, featuring a juicy beef p
           </div>
         </div>
       </div>
+      <ProductImageModal />
     </div>
   );
 };
