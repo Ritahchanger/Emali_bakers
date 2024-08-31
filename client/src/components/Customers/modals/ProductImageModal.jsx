@@ -1,15 +1,15 @@
 import "./ProductImageModal.css";
 
-import FoodSample from "../../../assets/images/assets/food_15.png";
-
-const ProductImageModal = () => {
+const ProductImageModal = ({ imageView, handleShowModal, singleImage }) => {
   return (
-    <div className="modal product-image">
+    <div className={`modal product-image ${imageView ? "active" : ""}`}>
       <div className="modal-wrapper">
         <div className="modal-contents-container">
-          <button className="close-button">&times;</button>
+          <button className="close-button" onClick={handleShowModal}>
+            &times;
+          </button>
           <div className="img-wrapper">
-            <img src={FoodSample} alt="" />
+            <img src={singleImage} alt="Selected product view" />
           </div>
         </div>
       </div>

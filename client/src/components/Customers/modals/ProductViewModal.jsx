@@ -7,6 +7,11 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 import ProductImageModal from "./ProductImageModal";
+import { useEffect, useState } from "react";
+
+import { useSelector, useDispatch } from "react-redux";
+
+import { closeProductViewModal } from "../../../Redux/Features/ProductViewSlice";
 
 const ProductViewModal = () => {
   const content = `
@@ -52,26 +57,58 @@ Our Classic Hamburger is a simple yet flavorful choice, featuring a juicy beef p
 **Order now** and enjoy the perfect balance of savory, fresh, and satisfying flavors in every bite!
  `;
 
+  const [singleImage, setSingleImage] = useState(FoodSample);
+  const [imageView, showViewImage] = useState(false);
+
+  const handleShowModal = () => {
+    showViewImage(!imageView);
+  };
+
+  const dispatch = useDispatch();
+
+  const displayProductViewModal = useSelector(
+    (state) => state.productView.displayProductViewModal
+  );
+  const data = useSelector((state) => state.productView.data);
+
+  const handleShowImage = (image) => {
+    setSingleImage(image);
+    handleShowModal();
+  };
+  const handleCloseProductViewModal = () => {
+    dispatch(closeProductViewModal());
+  };
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
-    <div className="modal product-view">
+    <div
+      className={`modal product-view ${
+        displayProductViewModal ? "active" : null
+      }`}
+    >
       <div className="modal-wrapper">
-        <button className="close-button">&times;</button>
+        <button className="close-button" onClick={handleCloseProductViewModal}>
+          &times;
+        </button>
         <div className="modal-contents-container">
-          <p className="small-header">HAMBURGER</p>
+          <p className="small-header">{data?.name || "NO NAME"}</p>
           <div className="row">
             <div className="food-display-images">
-              <div className="img-container">
-                <img src={FoodSample} alt="" />
-              </div>
-              <div className="img-container">
-                <img src={FoodSample} alt="" />
-              </div>
-              <div className="img-container">
-                <img src={FoodSample} alt="" />
-              </div>
-              <div className="img-container">
-                <img src={FoodSample} alt="" />
-              </div>
+              {[...Array(4)].map((_, index) => (
+                <div
+                  className="img-container"
+                  key={index}
+                  onClick={() => handleShowImage(FoodSample)}
+                >
+                  <img src={FoodSample} alt={`Hamburger view ${index + 1}`} />
+                </div>
+              ))}
             </div>
             <div className="food-description">
               <ReactMarkdown remarkPlugins={[remarkGfm]}>
@@ -79,9 +116,16 @@ Our Classic Hamburger is a simple yet flavorful choice, featuring a juicy beef p
               </ReactMarkdown>
             </div>
           </div>
+          <button className="hero-btn-cart">ADD TO CART</button>
         </div>
       </div>
-      <ProductImageModal />
+      {imageView && (
+        <ProductImageModal
+          imageView={imageView}
+          handleShowModal={handleShowModal}
+          singleImage={singleImage}
+        />
+      )}
     </div>
   );
 };

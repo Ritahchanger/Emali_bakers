@@ -1,3 +1,9 @@
-.modal.product-image .modal-wrapper{
-    max-width:500px;
+.modal.product-image {
+  display: none;
+}
+.modal.product-image.active {
+  display: flex;
+}
+.modal.product-image .modal-wrapper {
+  max-width: 500px;
 }
