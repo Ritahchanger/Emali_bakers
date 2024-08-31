@@ -6,7 +6,7 @@
   font-family: "outfit", sans-serif;
 }
 
-body{
+body {
   position: relative;
 }
 :root {
@@ -21,6 +21,7 @@ body{
   --mobileFont: 13px;
   --header3: #212ea0;
   --darkGray: #676767;
+  --customBg: rgba(0, 0, 0, 0.75);
 }
 ::-webkit-scrollbar {
   width: 3px;
@@ -129,16 +130,56 @@ img {
   font-size: 1.3rem;
 }
 
-.arrow-icon{
-  width:50px;
-  position:fixed;
-  top:calc(100vh - 200px);
-  right:2rem;
-  z-index:99;
+.arrow-icon {
+  width: 50px;
+  position: fixed;
+  top: calc(100vh - 200px);
+  right: 2rem;
+  z-index: 99;
   cursor: pointer;
 }
-@media (max-width: 716px){
-  .arrow-icon{
-    width:40px;
+
+.modal {
+  height: 100vh;
+  width: 100%;
+
+  position: fixed;
+
+  top: 0;
+
+  right: 0;
+
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+
+  background: linear-gradient(var(--customBg), var(--customBg));
+
+  z-index: 99;
+}
+
+.modal .modal-wrapper {
+  background: var(--white);
+  max-width: 1100px;
+  width: 95%;
+  position: relative;
+}
+
+.modal .modal-wrapper .modal-contents-container {
+  width: 100%;
+
+  padding: 1rem;
+
+  max-height: calc(100vh - 50px);
+
+  overflow-y: scroll;
+}
+
+@media (max-width: 716px) {
+  .arrow-icon {
+    width: 40px;
   }
 }

@@ -14,7 +14,7 @@ const AllItems = () => {
       <div className="row">
         <p className="small-header mobile">All Items</p>
         <div className="filter-container">
-          <p className="small-header">Filter</p>
+          <p className="small-header"w>Filter</p>
           <select name="filter" id="">
             <option value="">Filter by</option>
             <option value="">Name</option>

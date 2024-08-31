@@ -6,6 +6,7 @@ import Testimonials from "./Testimonials";
 import Footer from "../../../components/Customers/Footer";
 import Main from "../Main/Main";
 import NavigateTop from "../../../components/NavigateTop";
+import ProductViewModal from "../../../components/Customers/modals/ProductViewModal";
 const Home = () => {
   return (
     <div className="home">
@@ -15,6 +16,7 @@ const Home = () => {
       <Main />
       <Testimonials />
       <NavigateTop />
+      <ProductViewModal />
       <Footer />
     </div>
   );
