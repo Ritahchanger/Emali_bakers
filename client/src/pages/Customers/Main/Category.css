@@ -1,7 +1,7 @@
 .main-container .row .col {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content:space-between;
   text-align: center;
 }
 .main-container .row {

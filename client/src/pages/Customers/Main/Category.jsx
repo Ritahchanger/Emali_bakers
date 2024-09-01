@@ -7,7 +7,37 @@ const Category = () => {
         <div className="row">
           <div className="col">
             <input type="checkbox" name="" id="" />
-            <p>Hamburger</p>
+            <p>Bread</p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <input type="checkbox" name="" id="" />
+            <p>Pastries</p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <input type="checkbox" name="" id="" />
+            <p>Cakes</p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <input type="checkbox" name="" id="" />
+            <p>Cookies</p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <input type="checkbox" name="" id="" />
+            <p>Doughnuts</p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <input type="checkbox" name="" id="" />
+            <p>Pies </p>
           </div>
         </div>
         <div className="row">
@@ -19,37 +49,7 @@ const Category = () => {
         <div className="row">
           <div className="col">
             <input type="checkbox" name="" id="" />
-            <p>Hamburger</p>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col">
-            <input type="checkbox" name="" id="" />
-            <p>Hamburger</p>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col">
-            <input type="checkbox" name="" id="" />
-            <p>Hamburger</p>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col">
-            <input type="checkbox" name="" id="" />
-            <p>Hamburger</p>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col">
-            <input type="checkbox" name="" id="" />
-            <p>Hamburger</p>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col">
-            <input type="checkbox" name="" id="" />
-            <p>Hamburger</p>
+            <p>Beverages</p>
           </div>
         </div>
       </div>

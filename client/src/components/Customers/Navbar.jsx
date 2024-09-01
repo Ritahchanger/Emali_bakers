@@ -50,6 +50,25 @@ const Navbar = () => {
                 </span>
                 <span className="icon-name">Products</span>
               </Link>
+              <div className="drop_down">
+                <ul>
+                  <li>
+                    <a href="#">Breads</a>
+                  </li>
+                  <li>
+                    <a href="#">Pastries</a>
+                  </li>
+                  <li>
+                    <a href="#">Cakes</a>
+                  </li>
+                  <li>
+                    <a href="#">Cookies</a>
+                  </li>
+                  <li>
+                    <a href="#">Muffins</a>
+                  </li>
+                </ul>
+              </div>
             </p>
             <p className="nav_li mobile">
               <Link to="/customer/cart">
