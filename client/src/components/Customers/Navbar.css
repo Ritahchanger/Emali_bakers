@@ -161,9 +161,11 @@
     z-index: 9;
     width: 250px;
     height: calc(100vh - 50px);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     transition: all 0.5s;
     z-index: 99;
+    border-top:3px solid var(--maroon);
+    border-right:3px solid var(--maroon);
+    border-top-right-radius:20px;
   }
   .nav .container .navigation_menu.active {
     left: 0;
