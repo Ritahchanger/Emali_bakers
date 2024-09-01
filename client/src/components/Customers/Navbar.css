@@ -221,6 +221,9 @@
     background: transparent;
     color: var(--maroon);
   }
+  .nav .container .navigation_menu .cart-items{
+    right:10px
+  }
 }
 
 @media (max-width: 716px) {
