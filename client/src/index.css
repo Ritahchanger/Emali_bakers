@@ -226,9 +226,14 @@ img {
   padding: 0.5rem 1rem;
 }
 
+.table-wrapper{
+  overflow-x: scroll;
+  padding:10px;
+}
 table {
   border-collapse: collapse;
-  width: 100%;
+  min-width:408px;
+  width:100%;
 }
 table thead {
   border-bottom: 1px solid var(--darkGray);
@@ -244,6 +249,7 @@ table  p{
 }
 table td{
   padding:0.7rem 0.4rem;
+
 }
 
 @media(max-width:424px){

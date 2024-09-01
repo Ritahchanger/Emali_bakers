@@ -84,6 +84,9 @@ const Summary = () => {
             </tbody>
           </table>
         </div>
+        <div className="total">
+          <p className="small-header">Total= Sh:89000</p>
+        </div>
         <Link to="/customer/checkout">
           <button className="main-button">PROCEED TO CHECKOUT</button>
         </Link>
