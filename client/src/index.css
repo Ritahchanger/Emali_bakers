@@ -226,14 +226,17 @@ img {
   padding: 0.5rem 1rem;
 }
 
-.table-wrapper{
-  overflow-x: scroll;
-  padding:10px;
+/* Container for the table to allow scrolling */
+.table-wrapper {
+  max-width: 100%;
+  overflow-x: auto; /* Enables horizontal scrolling if content overflows */
 }
+
+/* Existing table styles */
 table {
   border-collapse: collapse;
-  min-width:408px;
-  width:100%;
+  min-width: 408px;
+  width: 100%; /* Keep this so that the table stretches to fit the container */
 }
 table thead {
   border-bottom: 1px solid var(--darkGray);
@@ -242,15 +245,14 @@ table tbody tr td img {
   max-height: 60px;
   max-width: 60px;
 }
-
-table  p{
-  color:var(--darkGray);
-  line-height:2rem;
+table p {
+  color: var(--darkGray);
+  line-height: 2rem;
 }
-table td{
-  padding:0.7rem 0.4rem;
-
+table td {
+  padding: 0.7rem 0.4rem;
 }
+
 
 @media(max-width:424px){
   table  p{

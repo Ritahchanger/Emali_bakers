@@ -16,18 +16,17 @@
   width: 40px;
   height: 40px;
   display: flex;
-  outline:none;
-  text-align:center;
-  border:2px solid var(--darkGray);
+  outline: none;
+  text-align: center;
+  border: 2px solid var(--darkGray);
 }
 .items .table-wrapper .delete-btn {
   background: transparent;
   border: none;
   font-size: 16px;
-  color:var(--redPink);
+  color: var(--redPink);
 }
 
 .items .table-wrapper table p {
   color: var(--darkGray);
 }
-

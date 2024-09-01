@@ -12,6 +12,12 @@
 
 @media(max-width:816px){
   .cart .container .row{
-    grid-template-columns:repeat(1,1fr);
+    display:flex;
+    flex-direction:column;
+    margin-top:10px;
   }
+  .cart .container table td .row{
+    flex-direction:row;
+  }
+
 }

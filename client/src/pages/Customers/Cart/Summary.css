@@ -1,5 +1,9 @@
-.total{
-    display:flex;
-    justify-content:end;
-    padding:10px;
+.total {
+  display: flex;
+  justify-content: end;
+  padding: 10px;
+}
+.total p {
+  border: 1px solid var(--blue);
+  
 }
