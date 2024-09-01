@@ -191,10 +191,9 @@ img {
   color: var(--redPink);
   transition: all 0.5s;
 }
-.empty{
-  padding-top:47px;
+.empty {
+  padding-top: 47px;
 }
-
 
 @media (max-width: 716px) {
   .arrow-icon {
@@ -216,8 +215,21 @@ img {
   color: var(--white);
 
   font-size: 1.5rem;
-
 }
-.close-button:hover{
+.close-button:hover {
   cursor: pointer;
+}
+.main-button {
+  border: none;
+  background: var(--maroon);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+}
+
+table{
+  border-collapse: collapse;
+  width:100%;
+}
+table thead{
+  border-bottom:1px solid var(--darkGray);
 }
