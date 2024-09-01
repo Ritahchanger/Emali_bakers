@@ -109,7 +109,6 @@
 
 .nav .container .menu-icon button {
   font-size: 2.3rem;
-  cursor: pointer;
   background: transparent;
   border: none;
   color: var(--redPink);
