@@ -13,6 +13,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { closeProductViewModal } from "../../../Redux/Features/ProductViewSlice";
 
+
 const ProductViewModal = () => {
   const content = `
  # 🍔 Classic Hamburger

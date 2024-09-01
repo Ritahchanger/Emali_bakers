@@ -6,6 +6,16 @@
   background: var(--white);
   top:0;
 }
+.drop_down {
+  display: none;
+  /* Add any additional styling for the dropdown here */
+}
+
+.drop_down.show {
+  display: block;
+  /* Add any additional styling for the visible dropdown here */
+}
+
 .nav .container {
   display: flex;
   justify-content: space-between;

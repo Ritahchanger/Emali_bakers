@@ -18,9 +18,18 @@ import {
 
 const Navbar = () => {
   const [sidebar, showSidebar] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const handleSidebar = () => {
     showSidebar(!sidebar);
+  };
+
+  const handleDropdownToggle = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
+  const handleDropdownItemClick = () => {
+    setDropdownOpen(false); // Hide the dropdown when an item is clicked
   };
 
   return (
@@ -35,37 +44,35 @@ const Navbar = () => {
           <div className="nav_ul">
             <p className="nav_li">
               <Link to="/">
-                {" "}
                 <span className="icon">
-                  {" "}
                   <FontAwesomeIcon icon={faHome} size="2x" />
                 </span>
                 <span className="icon-name"> Home</span>
               </Link>
             </p>
             <p className="nav_li">
-              <Link to="/account/products/">
+              <Link to="/account/products/" onClick={handleDropdownToggle}>
                 <span className="icon">
                   <FontAwesomeIcon icon={faBoxOpen} size="2x" />
                 </span>
                 <span className="icon-name">Products</span>
               </Link>
-              <div className="drop_down">
+              <div className={`drop_down ${dropdownOpen ? "show" : ""}`}>
                 <ul>
-                  <li>
-                    <a href="#">Breads</a>
+                  <li onClick={handleDropdownItemClick}>
+                    <Link to="/account/products/breads">Breads</Link>
                   </li>
-                  <li>
-                    <a href="#">Pastries</a>
+                  <li onClick={handleDropdownItemClick}>
+                    <Link to="/account/products/pastries">Pastries</Link>
                   </li>
-                  <li>
-                    <a href="#">Cakes</a>
+                  <li onClick={handleDropdownItemClick}>
+                    <Link to="/account/products/breads">Breads</Link>
                   </li>
-                  <li>
-                    <a href="#">Cookies</a>
+                  <li onClick={handleDropdownItemClick}>
+                    <Link to="/account/products/cakes">Cakes</Link>
                   </li>
-                  <li>
-                    <a href="#">Muffins</a>
+                  <li onClick={handleDropdownItemClick}>
+                    <Link to="/account/products/muffins">Muffins</Link>
                   </li>
                 </ul>
               </div>
