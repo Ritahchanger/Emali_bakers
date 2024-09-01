@@ -51,7 +51,6 @@ const Navbar = () => {
                 <span className="icon-name">Products</span>
               </Link>
             </p>
-
             <p className="nav_li mobile">
               <Link to="/customer/cart">
                 <span className="icon">
@@ -62,6 +61,7 @@ const Navbar = () => {
             </p>
 
             <p className="nav_li">
+              <sup className="cart-items">15</sup>
               <Link to="/customer/cart">
                 <span className="icon">
                   <FontAwesomeIcon icon={faShoppingCart} size="2x" />

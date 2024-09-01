@@ -1,5 +1,9 @@
 .nav {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  position:fixed;
+  width:100%;
+  z-index:9;
+  background:var(--white);
 }
 .nav .container {
   display: flex;
@@ -35,6 +39,16 @@
   position: relative;
   margin-left: 5px;
 }
+.nav .container .navigation_menu .nav_ul .nav_li{
+  position: relative;
+}
+.nav .container .navigation_menu .cart-items{
+  position:absolute;
+  right:0;
+  font-weight:600;
+  color: var(--redPink);
+  
+}
 .nav .container .navigation_menu .nav_ul .nav_li a {
   display: flex;
   align-items: center;
@@ -46,7 +60,7 @@
   margin-left: 5px;
 }
 .nav .container .navigation_menu .nav_ul .nav_li a .icon {
-  font-size: 12px;
+  font-size: 8px;
 }
 .nav .logo-div .logo span::before {
   position: absolute;
@@ -115,9 +129,26 @@
 .nav .container .nav_li.mobile {
   display: none;
 }
+ 
 @media (min-width: 850px) {
   .nav .container .profile-icon .credential-buttons.mobile {
     display: none;
+  }
+  .nav .container .navigation_menu .nav_ul .nav_li{
+    position:relative;
+  }
+  .nav .container .navigation_menu .nav_ul .nav_li::after{
+    position:absolute;
+    content:"";
+    background:var(--header3);
+    width:0%;
+    left:0;
+    height:3px;
+    bottom:0;
+    transition:all 0.5s;
+  }
+  .nav .container .navigation_menu .nav_ul .nav_li:hover::after{
+    width:100%;
   }
 }
 
