@@ -14,7 +14,7 @@ const ProductPage = () => {
         <p className="empty"></p>
         <div className="small-header">Products</div>
         <p className="medium-header">
-          {product_name.toUpperCase() || "SNACKS"}
+          {product_name?.toUpperCase() || "SNACKS"}
         </p>
         <div className="products-grid">
           <ProductCard />
