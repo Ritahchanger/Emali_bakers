@@ -191,6 +191,10 @@ img {
   color: var(--redPink);
   transition: all 0.5s;
 }
+.empty{
+  padding-top:47px;
+}
+
 
 @media (max-width: 716px) {
   .arrow-icon {
