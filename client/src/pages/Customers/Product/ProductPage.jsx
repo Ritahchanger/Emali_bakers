@@ -4,6 +4,7 @@ import ProductCard from "../../../components/Customers/ProductCard";
 import { useParams } from "react-router-dom";
 import "./Products.css";
 import ProductViewModal from "../../../components/Customers/modals/ProductViewModal";
+import NavigateTop from "../../../components/NavigateTop";
 const ProductPage = () => {
   const { product_name } = useParams();
 
@@ -31,6 +32,7 @@ const ProductPage = () => {
         </div>
       </div>
       <ProductViewModal />
+      <NavigateTop/>
       <Footer />
     </div>
   );

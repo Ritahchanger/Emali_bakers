@@ -10,6 +10,8 @@ import CartItems from "./CartItems";
 
 import Summary from "./Summary";
 
+import NavigateTop from "../../../components/NavigateTop";
+
 const Cart = () => {
   return (
     <div className="cart">
@@ -21,6 +23,7 @@ const Cart = () => {
           <Summary />
         </div>
       </div>
+      <NavigateTop/>
       <Footer />
     </div>
   );
