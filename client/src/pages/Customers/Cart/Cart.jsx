@@ -16,7 +16,6 @@ const Cart = () => {
       <Navbar />
       <div className="container">
         <p className="empty"></p>
-        <p className="medium-header">Shopping Items</p>
         <div className="row">
           <CartItems />
           <Summary />

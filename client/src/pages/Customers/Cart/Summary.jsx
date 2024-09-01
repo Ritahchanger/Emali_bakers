@@ -1,6 +1,9 @@
+import "./Summary.css";
+import { Link } from "react-router-dom";
 const Summary = () => {
   return (
     <div className="summary">
+      <p className="small-header">SUMMARY</p>
       <div className="summary-container">
         <div className="table-wrapper">
           <table>
@@ -12,23 +15,78 @@ const Summary = () => {
               </tr>
             </thead>
             <tbody>
-             <tr>
+              <tr>
                 <td>
-                    Hamburger
+                  <p>Hamburger</p>
                 </td>
                 <td>
-                    sh.5000
+                  <p>sh.5000</p>
                 </td>
                 <td>
-                    15
+                  <p>17</p>
                 </td>
-             </tr>
+              </tr>
+              <tr>
+                <td>
+                  <p>Hamburger</p>
+                </td>
+                <td>
+                  <p>sh.5000</p>
+                </td>
+                <td>
+                  <p>17</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Hamburger</p>
+                </td>
+                <td>
+                  <p>sh.5000</p>
+                </td>
+                <td>
+                  <p>17</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Hamburger</p>
+                </td>
+                <td>
+                  <p>sh.5000</p>
+                </td>
+                <td>
+                  <p>17</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Hamburger</p>
+                </td>
+                <td>
+                  <p>sh.5000</p>
+                </td>
+                <td>
+                  <p>17</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Hamburger</p>
+                </td>
+                <td>
+                  <p>sh.5000</p>
+                </td>
+                <td>
+                  <p>17</p>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
-        <button className="main-button">
-            PROCEED TO CHECKOUT
-        </button>
+        <Link to="/customer/checkout">
+          <button className="main-button">PROCEED TO CHECKOUT</button>
+        </Link>
       </div>
     </div>
   );

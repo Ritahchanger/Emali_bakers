@@ -226,10 +226,29 @@ img {
   padding: 0.5rem 1rem;
 }
 
-table{
+table {
   border-collapse: collapse;
-  width:100%;
+  width: 100%;
 }
-table thead{
-  border-bottom:1px solid var(--darkGray);
+table thead {
+  border-bottom: 1px solid var(--darkGray);
+}
+table tbody tr td img {
+  max-height: 60px;
+  max-width: 60px;
+}
+
+table  p{
+  color:var(--darkGray);
+  line-height:2rem;
+}
+table td{
+  padding:0.7rem 0.4rem;
+}
+
+@media(max-width:424px){
+  table  p{
+    font-size:12px;
+    font-weight:600;
+  }
 }

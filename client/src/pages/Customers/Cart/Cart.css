@@ -11,3 +11,9 @@
     box-shadow:0 0 5px rgba(0,0,0,0.25);
     padding:10px;
 }
+
+@media(max-width:816px){
+  .cart .container .row{
+    grid-template-columns:repeat(1,1fr);
+  }
+}
