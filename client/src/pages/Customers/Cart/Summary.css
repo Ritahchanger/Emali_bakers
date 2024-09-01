@@ -4,6 +4,8 @@
   padding: 10px;
 }
 .total p {
-  border: 1px solid var(--blue);
-  
+  border: 1px solid var(--blue);  
+}
+.summary .main-button{
+    margin-left:5px;
 }

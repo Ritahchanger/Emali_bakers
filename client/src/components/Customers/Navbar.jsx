@@ -44,7 +44,7 @@ const Navbar = () => {
               </Link>
             </p>
             <p className="nav_li">
-              <Link to="#">
+              <Link to="/account/products/">
                 <span className="icon">
                   <FontAwesomeIcon icon={faBoxOpen} size="2x" />
                 </span>
