@@ -107,9 +107,9 @@ const Signup = () => {
                   placeholder="Enter username"
                 />
               </div>
-              <div className="input-group password"> 
+              <div className="input-group password">
                 <input
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   name="password"
                   placeholder="Enter password"
                 />
@@ -122,7 +122,7 @@ const Signup = () => {
               </div>
               <div className="input-group password">
                 <input
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   name="confirmPassword"
                   placeholder="Confirm password"
                 />
