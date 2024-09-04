@@ -46,6 +46,19 @@
   font-size: 3rem;
 }
 
+
+.hero .featured-animations .animated-card{
+  position:relative;
+}
+
+.hero .featured-animations .animated-card .details{
+  position:absolute;
+}
+
+.hero .featured-animations .animated-card p{
+  font-size:12px;
+}
+
 @media (max-width: 484px) {
   .hero {
     height: 100vh;

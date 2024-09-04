@@ -4,6 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import "./CartItems.css";
 
+import { useDispatch } from "react-redux";
+
+import { openProductViewModal } from "../../../Redux/Features/ProductViewSlice";
+
 const CartItems = () => {
   const [quantities, setQuantities] = useState([1, 1, 1, 1, 1, 1, 1]);
 
@@ -19,6 +23,12 @@ const CartItems = () => {
       newQuantities[index] -= 1;
     }
     setQuantities(newQuantities);
+  };
+
+  const dispatch = useDispatch();
+
+  const handleDisplayProductModal = (data) => {
+    dispatch(openProductViewModal(data));
   };
 
   return (
@@ -37,10 +47,18 @@ const CartItems = () => {
           <tbody>
             {quantities.map((quantity, index) => (
               <tr key={index}>
-                <td>
+                <td
+                  onClick={() => {
+                    handleDisplayProductModal({ name: "Hamburger" });
+                  }}
+                >
                   <img src={TestingFoodImage} alt="Food" />
                 </td>
-                <td>
+                <td
+                  onClick={() => {
+                    handleDisplayProductModal({ name: "Hamburger" });
+                  }}
+                >
                   <p>Hamburger</p>
                   <p>sh.30 000</p>
                 </td>

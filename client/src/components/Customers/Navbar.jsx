@@ -20,6 +20,12 @@ const Navbar = () => {
   const [sidebar, showSidebar] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
+  const [profileDropDown, setProfileDropDown] = useState(false);
+
+  const handleProfileDropDown = () => {
+    setProfileDropDown((previous) => !previous);
+  };
+
   const handleSidebar = () => {
     showSidebar(!sidebar);
   };
@@ -40,6 +46,14 @@ const Navbar = () => {
             Shoppi<span>en</span>
           </a>
         </div>
+        <div className="search_container">
+          <input
+            type="text"
+            name="searchItem"
+            id=""
+            placeholder="Search food or snack"
+          />
+        </div>
         <div className={`navigation_menu ${sidebar ? "active" : null}`}>
           <div className="nav_ul">
             <p className="nav_li">
@@ -50,6 +64,7 @@ const Navbar = () => {
                 <span className="icon-name"> Home</span>
               </Link>
             </p>
+
             <p className="nav_li">
               <Link to="/account/products/" onClick={handleDropdownToggle}>
                 <span className="icon">
@@ -104,7 +119,7 @@ const Navbar = () => {
               </Link>
             </p>
           </div>
-          <div className="credential-buttons desktop">
+          {/* <div className="credential-buttons desktop">
             <Link to="/authentication/signup">
               <button className="credential-btn">Signup</button>
             </Link>
@@ -112,25 +127,35 @@ const Navbar = () => {
             <Link to="/authentication/login">
               <button className="credential-btn">Login</button>
             </Link>
-          </div>
+          </div> */}
         </div>
         <div className="profile-icon">
-          <Link to="/account/profile">
+          <button onClick={handleProfileDropDown} className="profile-button">
             <img src={Profile} alt="profile-icon" />
-          </Link>
+          </button>
           <div className="menu-icon">
             <button onClick={handleSidebar}>&#9776;</button>
           </div>
-        </div>
 
-        <div className="credential-buttons mobile">
+          {profileDropDown && (
+            <div className="account-navigator" onClick={handleProfileDropDown}>
+              <Link to="/account/profile">
+                <button>Profile</button>
+              </Link>
+              <Link to="/authentication/login">
+                <button>Login</button>
+              </Link>
+            </div>
+          )}
+        </div>
+        {/* <div className="credential-buttons mobile">
           <Link to="/authentication/signup">
             <button className="credential-btn">Signup</button>
           </Link>
           <Link to="/authentication/login">
             <button className="credential-btn">Login</button>
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );

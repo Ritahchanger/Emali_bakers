@@ -84,6 +84,7 @@ const Summary = () => {
             </tbody>
           </table>
         </div>
+        <hr />
         <div className="total">
           <p className="small-header">Total= Sh:89000</p>
         </div>

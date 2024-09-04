@@ -12,6 +12,10 @@ import Summary from "./Summary";
 
 import NavigateTop from "../../../components/NavigateTop";
 
+import ProductViewModal from "../../../components/Customers/modals/ProductViewModal";
+
+
+
 const Cart = () => {
   return (
     <div className="cart">
@@ -23,7 +27,8 @@ const Cart = () => {
           <Summary />
         </div>
       </div>
-      <NavigateTop/>
+      <NavigateTop />
+      <ProductViewModal />
       <Footer />
     </div>
   );

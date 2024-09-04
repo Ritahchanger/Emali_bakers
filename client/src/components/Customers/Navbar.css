@@ -4,7 +4,7 @@
   width: 100%;
   z-index: 9;
   background: var(--white);
-  top:0;
+  top: 0;
 }
 .drop_down {
   display: none;
@@ -25,6 +25,7 @@
 .nav .container .navigation_menu .nav_ul {
   display: flex;
 }
+
 .nav .container .profile-icon img {
   height: 30px;
   width: 30px;
@@ -58,6 +59,11 @@
   right: 0;
   font-weight: 600;
   color: var(--redPink);
+}
+.nav .profile-button{
+  border:none;
+  background:none;
+  cursor: pointer;
 }
 .nav .container .navigation_menu .nav_ul .nav_li a {
   display: flex;
@@ -108,7 +114,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   text-align: center;
+}
+.nav .container .profile-icon .account-navigator {
+  position: absolute;
+  top: 100%;
+  background: var(--white);
+  padding:1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  right: 2rem;
+}
+.nav .container .profile-icon .account-navigator a {
+  display: block;
+}
+.nav .container .profile-icon .account-navigator a button {
+  border: none;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  background:var(--maroon);
+  color:var(--white);
+  letter-spacing:2px;
+  cursor: pointer;
+}
+.nav .container .profile-icon .account-navigator a:nth-child(2) {
+  margin-top: 1.5rem;
 }
 .nav .container .profile-icon .credential-buttons.mobile {
   margin-right: 1rem;
@@ -137,6 +167,25 @@
 }
 .nav .container .nav_li.mobile {
   display: none;
+}
+
+.nav .search_container {
+  flex-basis: 40%;
+}
+
+.nav .search_container input {
+  border: none;
+  height: 40px;
+  border: 1px solid #ababab;
+  margin: 0.5rem 0rem;
+  width: 100%;
+  background: transparent;
+  padding: 10px;
+  outline: none;
+}
+
+.nav .search_container input:focus {
+  border: 1px solid #ff004f;
 }
 
 @media (min-width: 850px) {
@@ -226,10 +275,10 @@
     display: none;
   }
   .nav .container .navigation_menu .nav_ul p:hover {
-    background:var(--maroon);
+    background: var(--maroon);
     width: 100%;
   }
-  
+
   .nav .container .profile-icon .credential-buttons.mobile {
     position: absolute;
     display: flex;
@@ -262,7 +311,7 @@
   .nav .container .nav_ul .nav_li .drop_down {
     background: var(--white);
     display: none;
-    transition:all 0.5s;
+    transition: all 0.5s;
   }
   .nav .container .nav_ul .nav_li .drop_down ul li {
     padding-left: 1.5rem;
@@ -275,5 +324,14 @@
 @media (max-width: 716px) {
   .nav .container .nav_li.mobile {
     display: initial;
+  }
+}
+@media (max-width: 480px) {
+  .nav .search_container {
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    left: 0;
+    background: var(--white);
   }
 }
