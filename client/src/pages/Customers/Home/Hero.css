@@ -62,10 +62,10 @@
 
 .hero .featured-animations .animated-card .details {
   position: absolute;
-  top: 2rem;
-  left: 2rem;
-  right: 2rem;
-  bottom: 2rem;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
   color: var(--white);
   display: flex;
@@ -74,13 +74,25 @@
   flex-direction: column;
   padding: 2rem;
 }
+.hero .featured-animations .animated-card .details button{
+  border:none;
+  background:transparent;
+  color:var(--white);
+  font-size:2rem;
+  margin:0.5rem;
+}
 .hero .featured-animations .animated-card .details p {
   font-size: 1rem;
-  line-height: 2.5rem;
+  color: var(--white);
 }
 
-.hero .featured-animations .animated-card img{
-  border-radius:10px;
+.hero .featured-animations .animated-card .details p:nth-child(2){
+  font-size:0.6rem;
+  letter-spacing:2px;
+}
+
+.hero .featured-animations .animated-card img {
+  border-radius: 10px;
 }
 
 .hero .featured-animations .animated-card p {
@@ -88,8 +100,8 @@
 }
 
 @media (max-width: 618px) {
-  .hero .content .mobile{
-    display:none;
+  .hero .content .mobile {
+    display: none;
   }
 }
 
@@ -99,9 +111,8 @@
   }
 }
 
-
-@media(max-width:420px){
-  .hero .container .large-header{
+@media (max-width: 420px) {
+  .hero .container .large-header {
     margin-top: 5rem;
   }
 }
@@ -114,4 +125,3 @@
     font-size: 2.5rem;
   }
 }
-

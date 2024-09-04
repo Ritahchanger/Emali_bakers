@@ -10,47 +10,48 @@ import Food8 from "../../../assets/images/assets/food_8.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-
+import { FaCartPlus } from "react-icons/fa";
+import { BiShow } from "react-icons/bi";
 const featuredAnimationsData = [
   {
     img: Food1,
     price: 2.5,
-    name: "Hamburger",
+    name: "Cheeseburger",
   },
   {
     img: Food2,
     price: 2.7,
-    name: "Hamburger",
+    name: "Veggie Burger",
   },
   {
     img: Food3,
     price: 3.0,
-    name: "Hamburger",
+    name: "Chicken Sandwich",
   },
   {
     img: Food4,
     price: 3.1,
-    name: "Hamburger",
+    name: "BBQ Burger",
   },
   {
     img: Food5,
     price: 3.2,
-    name: "Hamburger",
+    name: "Fish Taco",
   },
   {
     img: Food6,
     price: 2.3,
-    name: "Hamburger",
+    name: "Turkey Burger",
   },
   {
     img: Food7,
     price: 2.5,
-    name: "Hamburger",
+    name: "Grilled Cheese",
   },
   {
     img: Food8,
     price: 2.9,
-    name: "Hamburger",
+    name: "Bacon Cheeseburger",
   },
 ];
 
@@ -59,7 +60,7 @@ const Hero = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     responsive: [
       {
@@ -72,7 +73,7 @@ const Hero = () => {
       {
         breakpoint: 660,
         settings: {
-          slidesToShow: 2, // Show 2 items at 660px width
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -113,6 +114,14 @@ const Hero = () => {
                   <div className="details">
                     <p>${item.price}</p>
                     <p>{item.name}</p>
+                    <div className="btns">
+                      <button className="cart-btn">
+                        <FaCartPlus />
+                      </button>
+                      <button className="cart-btn">
+                        <BiShow />
+                      </button>
+                    </div>
                   </div>
                 </div>
               ))}
