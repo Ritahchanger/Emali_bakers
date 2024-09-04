@@ -1,73 +1,73 @@
 const FooterData = [
   {
     id: 1,
-    title: "Increase Traffic",
+    title: "Explore",
     data: [
       {
-        info: "Add software",
+        info: "Browse Restaurants",
       },
       {
-        info: "Blog software",
+        info: "View Menus",
       },
       {
-        info: "SEO Software",
+        info: "Find Discounts",
       },
       {
-        info: "Customer Management System",
+        info: "Customer Reviews",
       },
     ],
   },
   {
     id: 2,
-    title: "Enhance  Security",
+    title: "Order",
     data: [
       {
-        info: "Firewall Setup",
+        info: "How to Order",
       },
       {
-        info: "Malware Protection",
+        info: "Track Your Order",
       },
       {
-        info: "SSL Certificates",
+        info: "Delivery Options",
       },
       {
-        info: "Data Encryption",
+        info: "Payment Methods",
       },
     ],
   },
   {
     id: 3,
-    title: "Boost Sales",
+    title: "Support",
     data: [
       {
-        info: "Email Marketing",
+        info: "Customer Service",
       },
       {
-        info: "CRM Integration",
+        info: "FAQs",
       },
       {
-        info: "E-commerce Platform",
+        info: "Report an Issue",
       },
       {
-        info: "Affiliate Marketing",
+        info: "Contact Us",
       },
     ],
   },
   {
     id: 4,
-    title: "Improve Experience",
+    title: "Stay Connected",
     data: [
       {
-        info: "Live Chat Support",
+        info: "Subscribe to Newsletter",
       },
       {
-        info: "User Feedback Tools",
+        info: "Follow us on Social Media",
       },
       {
-        info: "Personalization Software",
+        info: "Download our App",
       },
       {
-        info: "Customer Surveys",
+        info: "Join our Loyalty Program",
       },
     ],
   },
