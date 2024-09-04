@@ -60,7 +60,13 @@
   border-bottom: 1px solid var(--faintGray);
 
   margin-bottom: 1.5rem;
+  position: relative;
 }
+.authentication-container .input-group.password{
+  display:flex;
+  flex-direction:row;
+}
+
 .authentication-container.login .input-group p {
   font-size: 1.4rem;
 }
@@ -77,6 +83,10 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 1rem;
+}
+
+.authentication-container .password-controls{
+  font-size:1.5rem;
 }
 
 .home-navigator {

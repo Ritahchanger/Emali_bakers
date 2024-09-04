@@ -6,7 +6,18 @@ import "./Signup.css";
 
 import { Link } from "react-router-dom";
 
+import { GrHide } from "react-icons/gr";
+import { useState } from "react";
+
+import { BiShow } from "react-icons/bi";
+
 const Signup = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleShowPassword = () => {
+    setShowPassword((previous) => !previous);
+  };
+
   return (
     <div className="authentication-container signup">
       <div className="container">
@@ -96,19 +107,31 @@ const Signup = () => {
                   placeholder="Enter username"
                 />
               </div>
-              <div className="input-group">
+              <div className="input-group password"> 
                 <input
                   type="password"
                   name="password"
                   placeholder="Enter password"
                 />
+                <span
+                  className="password-controls"
+                  onClick={handleShowPassword}
+                >
+                  {!showPassword ? <BiShow /> : <GrHide />}
+                </span>
               </div>
-              <div className="input-group">
+              <div className="input-group password">
                 <input
                   type="password"
                   name="confirmPassword"
                   placeholder="Confirm password"
                 />
+                <span
+                  className="password-controls"
+                  onClick={handleShowPassword}
+                >
+                  {!showPassword ? <BiShow /> : <GrHide />}
+                </span>
               </div>
             </div>
           </div>

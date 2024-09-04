@@ -192,7 +192,7 @@ img {
   transition: all 0.5s;
 }
 .empty {
-  padding-top: 47px;
+  padding-top: 55px;
 }
 
 @media (max-width: 716px) {

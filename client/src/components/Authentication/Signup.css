@@ -21,6 +21,10 @@
 .authentication-container.signup .section {
   width: 100%;
 }
+
+.authentication-container.signup .input-group.password input{
+  border:none;
+}
 .authentication-container.signup .row {
   width: 100%;
   display: grid;

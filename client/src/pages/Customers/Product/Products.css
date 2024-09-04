@@ -4,6 +4,14 @@
   gap: 1rem;
 }
 
+.products .related-products{
+  margin-top:4rem;
+}
+
+.products .related-products .products-grid{
+  margin-top:2rem;
+}
+
 @media(max-width:484px){
     .products .products-grid {
         grid-template-columns: repeat(3, 1fr);

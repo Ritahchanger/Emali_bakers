@@ -10,16 +10,26 @@ import { faLock } from "@fortawesome/free-solid-svg-icons";
 
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
+import { BiShow } from "react-icons/bi";
+
+import { GrHide } from "react-icons/gr";
+import { useState } from "react";
+
 const Login = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleShowPassword = () => {
+    setShowPassword((previous) => !previous);
+  };
+
   return (
     <div className="authentication-container login">
-       <p className="home-navigator">
-          <Link to="/">
-            <FontAwesomeIcon icon={faArrowLeft} />
-          </Link>
-        </p>
+      <p className="home-navigator">
+        <Link to="/">
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </Link>
+      </p>
       <div className="container">
-       
         <p className="auth-forms-title">LOGIN</p>
         <form action="#">
           <div className="input-group">
@@ -38,11 +48,15 @@ const Login = () => {
               <FontAwesomeIcon icon={faLock} />
             </p>
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               name="password"
               id="#"
               placeholder="Enter your password..."
             />
+
+            <span className="password-controls" onClick={handleShowPassword}>
+              {!showPassword ? <BiShow /> : <GrHide />}
+            </span>
           </div>
 
           <div className="input_group">

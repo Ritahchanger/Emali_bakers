@@ -30,9 +30,18 @@ const ProductPage = () => {
           <ProductCard />
           <ProductCard />
         </div>
+
+        <div className="related-products">
+          <p className="medium-header">{"Related products"}</p>
+          <div className="products-grid">
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+          </div>
+        </div>
       </div>
       <ProductViewModal />
-      <NavigateTop/>
+      <NavigateTop />
       <Footer />
     </div>
   );

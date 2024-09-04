@@ -188,7 +188,7 @@
 .nav .search_container input::placeholder{
   color:#000;
   font-size:1rem;
-  font-weight:600;
+  font-weight:400;
 }
 
 .nav .search_container input:focus {
