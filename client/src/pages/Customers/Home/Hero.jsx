@@ -95,7 +95,7 @@ const Hero = () => {
             <br />
             Delivered to Your Doorsteps
           </h1>
-          <p>
+          <p className="mobile">
             Lorem ipsum dolor sit amet consectetur adipisicing elit Quam tenetur
             consequuntur corrupti quae cumque magnam earum dolorum neque.
           </p>

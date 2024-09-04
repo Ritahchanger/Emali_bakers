@@ -87,11 +87,25 @@
   font-size: 12px;
 }
 
+@media (max-width: 618px) {
+  .hero .content .mobile{
+    display:none;
+  }
+}
+
 @media (max-width: 484px) {
   .hero {
     height: 100vh;
   }
 }
+
+
+@media(max-width:420px){
+  .hero .container .large-header{
+    margin-top: 5rem;
+  }
+}
+
 @media (max-width: 372px) {
   .hero .content p {
     font-size: 1.2rem;
@@ -101,8 +115,3 @@
   }
 }
 
-@media(max-width:420px){
-  .hero .container .large-header{
-    margin-top: 5rem;
-  }
-}
