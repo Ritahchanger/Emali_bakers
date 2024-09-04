@@ -12,6 +12,9 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { FaCartPlus } from "react-icons/fa";
 import { BiShow } from "react-icons/bi";
+import ProductViewModal from "../../../components/Customers/modals/ProductViewModal";
+import { useDispatch } from "react-redux";
+import { openProductViewModal } from "../../../Redux/Features/ProductViewSlice";
 const featuredAnimationsData = [
   {
     img: Food1,
@@ -56,6 +59,12 @@ const featuredAnimationsData = [
 ];
 
 const Hero = () => {
+  const dispatch = useDispatch();
+
+  const handleDisplayProductModal = (data) => {
+    dispatch(openProductViewModal(data));
+  };
+
   const settings = {
     dots: true,
     infinite: true,
@@ -118,7 +127,14 @@ const Hero = () => {
                       <button className="cart-btn">
                         <FaCartPlus />
                       </button>
-                      <button className="cart-btn">
+                      <button
+                        className="cart-btn"
+                        onClick={() => {
+                          handleDisplayProductModal({
+                            name: item.name,
+                          });
+                        }}
+                      >
                         <BiShow />
                       </button>
                     </div>
@@ -129,6 +145,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <ProductViewModal />
     </div>
   );
 };

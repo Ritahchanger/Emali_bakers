@@ -70,7 +70,15 @@
 .nav .profile-button {
   border: none;
   background: none;
+  display:flex;
+  align-items:center;
+  justify-content: center;
 }
+
+.nav .container .arrow-drop-down{
+  font-size: 3rem;
+}
+
 .nav .container .navigation_menu .nav_ul .nav_li a {
   display: flex;
   align-items: center;

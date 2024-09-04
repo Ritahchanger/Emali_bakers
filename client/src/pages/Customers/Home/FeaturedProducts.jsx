@@ -13,7 +13,7 @@ import TestingImage8 from "../../../assets/images/assets/food_8.png";
 
 import { openProductViewModal } from "../../../Redux/Features/ProductViewSlice";
 
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import ProductViewModal from "../../../components/Customers/modals/ProductViewModal";
 

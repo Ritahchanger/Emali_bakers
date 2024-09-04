@@ -10,6 +10,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { FaSearch } from "react-icons/fa";
 
+import { RiArrowDropDownLine } from "react-icons/ri";
+
 import {
   faHome,
   faBoxOpen,
@@ -145,6 +147,9 @@ const Navbar = () => {
           <button onClick={handleProfileDropDown} className="profile-button">
             <img src={Profile} alt="profile-icon" />
           </button>
+          {/* <span className="arrow-drop-down">
+            <RiArrowDropDownLine />
+          </span> */}
           <div className="menu-icon">
             <button onClick={handleSidebar}>&#9776;</button>
           </div>
