@@ -99,6 +99,8 @@
   font-size: 12px;
 }
 
+
+
 @media (max-width: 618px) {
   .hero .content .mobile {
     display: none;

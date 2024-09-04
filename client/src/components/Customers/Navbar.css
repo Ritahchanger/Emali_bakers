@@ -16,6 +16,13 @@
   /* Add any additional styling for the visible dropdown here */
 }
 
+.nav .container .search-btn {
+  border: none;
+  background: transparent;
+  font-size: 1.4rem;
+  display: none;
+}
+
 .nav .container {
   display: flex;
   justify-content: space-between;
@@ -60,9 +67,9 @@
   font-weight: 600;
   color: var(--redPink);
 }
-.nav .profile-button{
-  border:none;
-  background:none;
+.nav .profile-button {
+  border: none;
+  background: none;
 }
 .nav .container .navigation_menu .nav_ul .nav_li a {
   display: flex;
@@ -120,7 +127,7 @@
   position: absolute;
   top: 100%;
   background: var(--white);
-  padding:1rem;
+  padding: 1rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   right: 2rem;
 }
@@ -131,9 +138,9 @@
   border: none;
   width: 100%;
   padding: 0.5rem 2rem;
-  background:var(--maroon);
-  color:var(--white);
-  letter-spacing:2px;
+  background: var(--maroon);
+  color: var(--white);
+  letter-spacing: 2px;
   cursor: pointer;
 }
 .nav .container .profile-icon .account-navigator a:nth-child(2) {
@@ -177,18 +184,16 @@
   height: 40px;
   border: 1px solid #ababab;
   margin: 0.5rem 0rem;
-
-
   width: 100%;
   background: transparent;
   padding: 10px;
   outline: none;
 }
 
-.nav .search_container input::placeholder{
-  color:#000;
-  font-size:1rem;
-  font-weight:400;
+.nav .search_container input::placeholder {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .nav .search_container input:focus {
@@ -338,7 +343,25 @@
     position: absolute;
     top: 80%;
     width: 100%;
+
+    background: var(--white);
+    padding: 10px 10px;
+    left: -100%;
+    transition: all 0.5s;
+  }
+  .nav .search_container.active {
     left: 0;
-   
+  }
+
+  .nav .search_container .nav .search_container input {
+    padding: 0;
+    border: none;
+    padding: 10px;
+    margin: 0rem;
+    border: 1px solid #ababab;
+  }
+
+  .nav .container .search-btn {
+    display: initial;
   }
 }

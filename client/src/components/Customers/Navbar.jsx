@@ -8,6 +8,8 @@ import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { FaSearch } from "react-icons/fa";
+
 import {
   faHome,
   faBoxOpen,
@@ -24,6 +26,12 @@ const Navbar = () => {
 
   const handleProfileDropDown = () => {
     setProfileDropDown((previous) => !previous);
+  };
+
+  const [searchBar, showSearchBar] = useState(false);
+
+  const handleShowSearchBar = () => {
+    showSearchBar((previous) => !previous);
   };
 
   const handleSidebar = () => {
@@ -46,14 +54,17 @@ const Navbar = () => {
             Shoppi<span>en</span>
           </a>
         </div>
-        <div className="search_container">
+        <div className={`search_container ${searchBar ? "active" : ""}`}>
           <input
             type="text"
             name="searchItem"
             id=""
-            placeholder="Search food or snack"
+            placeholder="Search food or snack..."
           />
         </div>
+        <button className="search-btn" onClick={handleShowSearchBar}>
+          <FaSearch />
+        </button>
         <div className={`navigation_menu ${sidebar ? "active" : null}`}>
           <div className="nav_ul">
             <p className="nav_li">
@@ -92,6 +103,7 @@ const Navbar = () => {
                 </ul>
               </div>
             </p>
+
             <p className="nav_li mobile">
               <Link to="/customer/cart">
                 <span className="icon">
