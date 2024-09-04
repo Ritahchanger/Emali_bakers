@@ -10,6 +10,7 @@ import Food8 from "../../../assets/images/assets/food_8.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+
 const featuredAnimationsData = [
   {
     img: Food1,
@@ -52,6 +53,7 @@ const featuredAnimationsData = [
     name: "Hamburger",
   },
 ];
+
 const Hero = () => {
   const settings = {
     dots: true,
@@ -68,7 +70,14 @@ const Hero = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 660,
+        settings: {
+          slidesToShow: 2, // Show 2 items at 660px width
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 558,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -76,6 +85,7 @@ const Hero = () => {
       },
     ],
   };
+
   return (
     <div className="hero">
       <div className="container">
@@ -86,11 +96,8 @@ const Hero = () => {
             Delivered to Your Doorsteps
           </h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-            modi tenetur saepe nihil blanditiis aspernatur.
-            <br />
-            Quam tenetur consequuntur corrupti quae cumque magnam earum dolorum
-            neque.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit Quam tenetur
+            consequuntur corrupti quae cumque magnam earum dolorum neque.
           </p>
           <div className="hero-buttons">
             <button className="hero-btn">Order Now</button>
@@ -104,7 +111,7 @@ const Hero = () => {
                     <img src={item.img} alt="" />
                   </div>
                   <div className="details">
-                    <p>{item.price}</p>
+                    <p>${item.price}</p>
                     <p>{item.name}</p>
                   </div>
                 </div>

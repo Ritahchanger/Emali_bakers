@@ -63,7 +63,6 @@
 .nav .profile-button{
   border:none;
   background:none;
-  cursor: pointer;
 }
 .nav .container .navigation_menu .nav_ul .nav_li a {
   display: flex;
@@ -178,10 +177,18 @@
   height: 40px;
   border: 1px solid #ababab;
   margin: 0.5rem 0rem;
+
+
   width: 100%;
   background: transparent;
   padding: 10px;
   outline: none;
+}
+
+.nav .search_container input::placeholder{
+  color:#000;
+  font-size:1rem;
+  font-weight:600;
 }
 
 .nav .search_container input:focus {
@@ -332,6 +339,6 @@
     top: 80%;
     width: 100%;
     left: 0;
-    background: var(--white);
+   
   }
 }
