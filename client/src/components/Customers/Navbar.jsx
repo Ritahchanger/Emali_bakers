@@ -1,17 +1,9 @@
 import "./Navbar.css";
-
 import Profile from "../../assets/icons/profile.png";
-
-import { Link } from "react-router-dom";
-
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import { FaSearch } from "react-icons/fa";
-
-import { RiArrowDropDownLine } from "react-icons/ri";
-
 import {
   faHome,
   faBoxOpen,
@@ -23,14 +15,14 @@ import {
 const Navbar = () => {
   const [sidebar, showSidebar] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
   const [profileDropDown, setProfileDropDown] = useState(false);
+  const [searchBar, showSearchBar] = useState(false);
+
+  const location = useLocation();
 
   const handleProfileDropDown = () => {
     setProfileDropDown((previous) => !previous);
   };
-
-  const [searchBar, showSearchBar] = useState(false);
 
   const handleShowSearchBar = () => {
     showSearchBar((previous) => !previous);
@@ -63,13 +55,18 @@ const Navbar = () => {
             id=""
             placeholder="Search food or snack..."
           />
+          <span>
+            <FaSearch />
+          </span>
         </div>
         <button className="search-btn" onClick={handleShowSearchBar}>
           <FaSearch />
         </button>
-        <div className={`navigation_menu ${sidebar ? "active" : null}`}>
+        <div className={`navigation_menu ${sidebar ? "active" : ""}`}>
           <div className="nav_ul">
-            <p className="nav_li">
+            <p
+              className={`nav_li ${location.pathname === "/" ? "active" : ""}`}
+            >
               <Link to="/">
                 <span className="icon">
                   <FontAwesomeIcon icon={faHome} size="2x" />
@@ -78,7 +75,13 @@ const Navbar = () => {
               </Link>
             </p>
 
-            <p className="nav_li">
+            <p
+              className={`nav_li ${
+                location.pathname.startsWith("/account/products")
+                  ? "active"
+                  : ""
+              }`}
+            >
               <Link to="/account/products/" onClick={handleDropdownToggle}>
                 <span className="icon">
                   <FontAwesomeIcon icon={faBoxOpen} size="2x" />
@@ -94,9 +97,6 @@ const Navbar = () => {
                     <Link to="/account/products/pastries">Pastries</Link>
                   </li>
                   <li onClick={handleDropdownItemClick}>
-                    <Link to="/account/products/breads">Breads</Link>
-                  </li>
-                  <li onClick={handleDropdownItemClick}>
                     <Link to="/account/products/cakes">Cakes</Link>
                   </li>
                   <li onClick={handleDropdownItemClick}>
@@ -106,7 +106,11 @@ const Navbar = () => {
               </div>
             </p>
 
-            <p className="nav_li mobile">
+            <p
+              className={`nav_li mobile ${
+                location.pathname === "/customer/cart" ? "active" : ""
+              }`}
+            >
               <Link to="/customer/cart">
                 <span className="icon">
                   <FontAwesomeIcon icon={faThList} size="2x" />
@@ -115,7 +119,11 @@ const Navbar = () => {
               </Link>
             </p>
 
-            <p className="nav_li">
+            <p
+              className={`nav_li ${
+                location.pathname === "/customer/cart" ? "active" : ""
+              }`}
+            >
               <sup className="cart-items">15</sup>
               <Link to="/customer/cart">
                 <span className="icon">
@@ -124,7 +132,12 @@ const Navbar = () => {
                 <span className="icon-name">Cart</span>
               </Link>
             </p>
-            <p className="nav_li">
+
+            <p
+              className={`nav_li ${
+                location.pathname === "/customer/checkout" ? "active" : ""
+              }`}
+            >
               <Link to="/customer/checkout">
                 <span className="icon">
                   <FontAwesomeIcon icon={faCreditCard} size="2x" />
@@ -133,23 +146,12 @@ const Navbar = () => {
               </Link>
             </p>
           </div>
-          {/* <div className="credential-buttons desktop">
-            <Link to="/authentication/signup">
-              <button className="credential-btn">Signup</button>
-            </Link>
-
-            <Link to="/authentication/login">
-              <button className="credential-btn">Login</button>
-            </Link>
-          </div> */}
         </div>
         <div className="profile-icon">
           <button onClick={handleProfileDropDown} className="profile-button">
             <img src={Profile} alt="profile-icon" />
           </button>
-          {/* <span className="arrow-drop-down">
-            <RiArrowDropDownLine />
-          </span> */}
+
           <div className="menu-icon">
             <button onClick={handleSidebar}>&#9776;</button>
           </div>
@@ -165,14 +167,6 @@ const Navbar = () => {
             </div>
           )}
         </div>
-        {/* <div className="credential-buttons mobile">
-          <Link to="/authentication/signup">
-            <button className="credential-btn">Signup</button>
-          </Link>
-          <Link to="/authentication/login">
-            <button className="credential-btn">Login</button>
-          </Link>
-        </div> */}
       </div>
     </div>
   );

@@ -185,12 +185,21 @@
 
 .nav .search_container {
   flex-basis: 40%;
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  position:relative;
+}
+.nav .search_container  span{
+  position:absolute;
+  right:20px;
 }
 
 .nav .search_container input {
   border: none;
   height: 40px;
-  border: 1px solid #ababab;
+  border:none;
+  border-bottom: 1px solid #ababab;
   margin: 0.5rem 0rem;
   width: 100%;
   background: transparent;
@@ -361,7 +370,7 @@
     left: 0;
   }
 
-  .nav .search_container .nav .search_container input {
+  .nav .search_container input {
     padding: 0;
     border: none;
     padding: 10px;
@@ -371,5 +380,8 @@
 
   .nav .container .search-btn {
     display: initial;
+  }
+  .nav .search_container  span{
+    display:none;
   }
 }
