@@ -21,7 +21,7 @@
 
   padding: 2rem 1rem 2rem 1rem;
 
-  background:#fff;
+  background: #fff;
 }
 
 .authentication-container.login .container {
@@ -64,12 +64,12 @@
   margin-bottom: 1.5rem;
   position: relative;
 }
-.authentication-container .input-group.password{
-  display:flex;
-  flex-direction:row;
+.authentication-container .input-group.password {
+  display: flex;
+  flex-direction: row;
 }
 
-.authentication-container .input-group input{
+.authentication-container .input-group input {
   background: transparent;
 }
 
@@ -80,8 +80,8 @@
 .authentication-container .input_group {
   width: 100%;
 }
-.authentication-container .input_group  input{
-  background:transparent;
+.authentication-container .input_group input {
+  background: transparent;
 }
 .authentication-container .input-group p {
   color: var(--maroon);
@@ -94,8 +94,8 @@
   margin-top: 1rem;
 }
 
-.authentication-container .password-controls{
-  font-size:1.5rem;
+.authentication-container .password-controls {
+  font-size: 1.5rem;
 }
 
 .home-navigator {
