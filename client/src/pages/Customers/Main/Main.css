@@ -66,3 +66,11 @@
     margin-bottom:3rem;
   }
 }
+
+@media (max-width: 398px){
+  .main .container .all-items{
+    padding:0;
+    background:transparent;
+    box-shadow:none;
+  }
+}
