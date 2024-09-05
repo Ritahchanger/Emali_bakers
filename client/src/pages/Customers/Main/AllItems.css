@@ -21,6 +21,7 @@
 @media (max-width: 398px) {
   .all-items .grid {
     grid-template-columns: repeat(2, 1fr);
+    
   }
   .all-items .small-header {
     font-size:14px;

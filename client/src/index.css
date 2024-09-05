@@ -22,7 +22,9 @@ body {
   --header3: #212ea0;
   --darkGray: #676767;
   --customBg: rgba(0, 0, 0, 0.75);
+  --slate: #cbd5e1;
 }
+
 ::-webkit-scrollbar {
   width: 3px;
   height: 12px;
@@ -253,10 +255,9 @@ table td {
   padding: 0.7rem 0.4rem;
 }
 
-
-@media(max-width:424px){
-  table  p{
-    font-size:12px;
-    font-weight:600;
+@media (max-width: 424px) {
+  table p {
+    font-size: 12px;
+    font-weight: 600;
   }
 }
