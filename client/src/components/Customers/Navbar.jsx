@@ -2,7 +2,7 @@ import "./Navbar.css";
 import Profile from "../../assets/icons/profile.png";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { FaSearch } from "react-icons/fa";
 import {
   faHome,
@@ -11,6 +11,9 @@ import {
   faCreditCard,
   faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [sidebar, showSidebar] = useState(false);
@@ -37,7 +40,7 @@ const Navbar = () => {
   };
 
   const handleDropdownItemClick = () => {
-    setDropdownOpen(false); // Hide the dropdown when an item is clicked
+    setDropdownOpen(false);
   };
 
   return (
@@ -151,6 +154,14 @@ const Navbar = () => {
           <button onClick={handleProfileDropDown} className="profile-button">
             <img src={Profile} alt="profile-icon" />
           </button>
+          <span
+            className={`credentials-dropdown ${
+              profileDropDown ? "active" : ""
+            }`}
+            onClick={handleProfileDropDown}
+          >
+            <FontAwesomeIcon icon={faCaretDown} />
+          </span>
 
           <div className="menu-icon">
             <button onClick={handleSidebar}>&#9776;</button>

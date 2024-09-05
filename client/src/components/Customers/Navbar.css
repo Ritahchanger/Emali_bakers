@@ -37,7 +37,13 @@
   height: 30px;
   width: 30px;
 }
-
+.nav .container .credentials-dropdown {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+.nav .container .credentials-dropdown.active {
+  transform: rotate(180deg);
+}
 .nav .container .navigation_menu .nav_ul p a {
   padding: 0.7rem 1rem;
   cursor: pointer;
@@ -70,12 +76,12 @@
 .nav .profile-button {
   border: none;
   background: none;
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-.nav .container .arrow-drop-down{
+.nav .container .arrow-drop-down {
   font-size: 3rem;
 }
 
@@ -186,19 +192,19 @@
 .nav .search_container {
   flex-basis: 40%;
   display: flex;
-  justify-content:space-between;
-  align-items:center;
-  position:relative;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
-.nav .search_container  span{
-  position:absolute;
-  right:20px;
+.nav .search_container span {
+  position: absolute;
+  right: 20px;
 }
 
 .nav .search_container input {
   border: none;
   height: 40px;
-  border:none;
+  border: none;
   border-bottom: 1px solid #ababab;
   margin: 0.5rem 0rem;
   width: 100%;
@@ -381,7 +387,7 @@
   .nav .container .search-btn {
     display: initial;
   }
-  .nav .search_container  span{
-    display:none;
+  .nav .search_container span {
+    display: none;
   }
 }
