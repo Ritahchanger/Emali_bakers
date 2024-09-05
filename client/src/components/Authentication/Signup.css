@@ -7,6 +7,9 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  background: var(--white);
+  margin:0 auto;
+  margin-top:2rem;
 }
 .authentication-container {
   max-width: 1300px;
