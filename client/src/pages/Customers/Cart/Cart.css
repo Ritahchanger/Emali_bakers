@@ -2,13 +2,15 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 1rem;
-  margin-top:2rem;
+  margin-top: 2rem;
 }
 .cart .container .row .summary {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  background: var(--white);
 }
 .cart .container .row .items {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  background: var(--white);
 }
 
 @media (max-width: 816px) {

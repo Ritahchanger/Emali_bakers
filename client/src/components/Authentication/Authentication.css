@@ -67,12 +67,19 @@
   flex-direction:row;
 }
 
+.authentication-container .input-group input{
+  background: transparent;
+}
+
 .authentication-container.login .input-group p {
   font-size: 1.4rem;
 }
 
 .authentication-container .input_group {
   width: 100%;
+}
+.authentication-container .input_group  input{
+  background:transparent;
 }
 .authentication-container .input-group p {
   color: var(--maroon);

@@ -15,11 +15,13 @@
   flex-basis: 300px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   padding: 1rem;
+  background: var(--white);
 }
 .main .container .all-items {
   flex-basis: calc(100% - 315px);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   padding: 1rem;
+  background:var(--white);
 }
 .main .medium-header.mobile {
   display: none;
