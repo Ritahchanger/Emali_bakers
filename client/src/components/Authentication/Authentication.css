@@ -61,7 +61,7 @@
 
   border-bottom: 1px solid var(--faintGray);
 
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 
   padding-bottom: 0rem;
   position: relative;
@@ -124,6 +124,6 @@
   position: absolute;
   left: 0;
   font-size: 12px;
-  bottom: -30px;
+  bottom: -35px;
   color: var(--redPink);
 }

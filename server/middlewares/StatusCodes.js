@@ -13,6 +13,11 @@ const StatusCode401 = (res, message) => {
 };
 
 
+const StatusCode404 = (res, message) => {
+  return res.status(200).json({  status:404, success:false, message:message});
+};
+
+
 
 const StatusCode500 = (error,req,res,next) =>{
 
@@ -22,7 +27,7 @@ const StatusCode500 = (error,req,res,next) =>{
 
 }
 
-module.exports = { StatusCode200,StatusCode400,StatusCode401,StatusCode500}
+module.exports = { StatusCode200,StatusCode400,StatusCode401,StatusCode500,StatusCode404}
 
 
 

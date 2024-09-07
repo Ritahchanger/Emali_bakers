@@ -14,22 +14,10 @@ const CustomerSchemaModel = new mongoose.Schema({
   businessPhoneNo: {
     type: String,
     required: true,
-    validate: {
-      validator: function(v) {
-        return /^(\+\d{1,3}[- ]?)?\d{10}$/.test(v); 
-      },
-      message: props => `${props.value} is not a valid phone number!`
-    }
   },
   businessEmail: {
     type: String,
     required: true,
-    validate: {
-      validator: function(v) {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); 
-      },
-      message: props => `${props.value} is not a valid email address!`
-    }
   },
   countyName: {
     type: String,
@@ -58,12 +46,6 @@ const CustomerSchemaModel = new mongoose.Schema({
   contactPersonPhoneNumber: {
     type: String,
     required: true,
-    validate: {
-      validator: function(v) {
-        return /^(\+\d{1,3}[- ]?)?\d{10}$/.test(v); 
-      },
-      message: props => `${props.value} is not a valid phone number!`
-    }
   },
   accountUserName: {
     type: String,
@@ -75,7 +57,7 @@ const CustomerSchemaModel = new mongoose.Schema({
     required: true,
   },
   deliveryDay: {
-    type: String,
+    type: [String],
     required: true,
     enum: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], 
   },

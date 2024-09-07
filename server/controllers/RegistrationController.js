@@ -61,7 +61,7 @@ const RegisterCompany = async (req, res, next) => {
       contactPersonPhoneNumber: req.body.pNo,
       accountUserName: req.body.userName,
       accountPassword: hashedPassword,
-      deliveryDay: req.body.days,
+      deliveryDay: [req.body.days],
     });
 
     await newCustomer.save();

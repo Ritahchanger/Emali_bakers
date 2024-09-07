@@ -17,7 +17,6 @@ const Login = () => {
     setShowPassword((previous) => !previous);
   };
 
-  // Regex for email and password validation
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+]).{8,}$/;
 
@@ -42,8 +41,25 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      // Perform form submission logic here
-      console.log("Form submitted successfully");
+      console.log(`Form submitted successfully.`);
+    }
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+
+    // Remove email error when user starts typing again
+    if (errors.email) {
+      setErrors((prevErrors) => ({ ...prevErrors, email: "" }));
+    }
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+
+    // Remove password error when user starts typing again
+    if (errors.password) {
+      setErrors((prevErrors) => ({ ...prevErrors, password: "" }));
     }
   };
 
@@ -66,7 +82,7 @@ const Login = () => {
               name="email"
               placeholder="Enter your email..."
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleEmailChange}
             />
             {errors.email && <p className="error-message">{errors.email}</p>}
           </div>
@@ -79,7 +95,7 @@ const Login = () => {
               name="password"
               placeholder="Enter your password..."
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={handlePasswordChange}
             />
             <span className="password-controls" onClick={handleShowPassword}>
               {!showPassword ? <BiShow /> : <GrHide />}

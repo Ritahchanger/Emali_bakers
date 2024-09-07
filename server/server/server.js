@@ -34,7 +34,7 @@ app.use(StatusCode500);
 
 
 
-app.use('/customers',CustomerRoute);
+app.use('/api/customers',CustomerRoute);
 
 
 
