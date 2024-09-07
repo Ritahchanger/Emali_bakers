@@ -1,44 +1,37 @@
 import { createSlice } from "@reduxjs/toolkit";
 import PreloaderSlice from "./PreloaderSlice";
 
-
 const initialState = {
+  displaySearchModal: false,
 
-    displaySearchModal:false,
-
-    data:null,
-
-}
+  results: [],
+};
 
 const SearchSlice = createSlice({
+  name: "search",
 
-    name:"search",
+  initialState,
 
-    initialState,
+  reducers: {
+    openSearchModal: (state, action) => {
+      state.data = action.payload;
 
-    reducers:{
+      state.displaySearchModal = true;
+    },
 
-        openSearchModal(state,action){
+    closeSearchModal: (state) => {
+      state.displaySearchModal = false;
 
-            state.data = action.payload;
+      state.data = null;
+    },
 
-            state.displaySearchModal = true;
+    setSearchResults: (state, action) => {
+      state.results = action.payload;
+    },
+  },
+});
 
-        },
-
-        closeSearchModal(state){
-
-            state.displaySearchModal = false;
-
-            state.data = null
-
-        }
-
-    }
-
-
-})
-
-export const { openSearchModal,closeSearchModal } = SearchSlice.actions;
+export const { openSearchModal, closeSearchModal, setSearchResults } =
+  SearchSlice.actions;
 
 export default SearchSlice;

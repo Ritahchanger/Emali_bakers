@@ -15,9 +15,9 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
-import { openSearchModal } from "../../Redux/Features/SearchSlice";
+import { openSearchModal,closeSearchModal } from "../../Redux/Features/SearchSlice";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 
 const Navbar = () => {
@@ -50,9 +50,26 @@ const Navbar = () => {
     setDropdownOpen(false);
   };
 
-  const handleDisplaySearchModal = (data) => {
-    dispatch(openSearchModal(data));
-  };
+  // const handleDisplaySearchModal = (data) => {
+  //   dispatch(openSearchModal(data));
+  // };
+
+  const handleSearchInput = (event) =>{
+
+    const query = event.target.value;
+
+    if(query){
+
+      dispatch(openSearchModal(query))
+
+    }
+    else{
+
+      dispatch(closeSearchModal())
+
+    }
+
+  }
 
   return (
     <div className="nav">
@@ -68,9 +85,7 @@ const Navbar = () => {
             name="searchItem"
             id=""
             placeholder="Search food or snack..."
-            onClick={() => {
-              handleDisplaySearchModal({ data: null });
-            }}
+            onChange={handleSearchInput}
           />
           <span>
             <FaSearch />
