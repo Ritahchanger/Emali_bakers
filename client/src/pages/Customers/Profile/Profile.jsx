@@ -8,6 +8,8 @@ import "./Profile.css";
 
 import Footer from "../../../components/Customers/Footer";
 
+import { useState } from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUserCircle,
@@ -21,13 +23,29 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Profile = () => {
+  const [minorSidebar, setMinorSidebar] = useState(false);
+
+  const handleMinorSidebar = () => {
+    setMinorSidebar((previous) => !previous);
+  };
+
   return (
     <>
       <Navbar />
       <div className="profile">
         <p className="empty"></p>
+
         <div className="container">
-          <div className="sidebar">
+          <button className="profile-info-btn" onClick={handleMinorSidebar}>
+            &#9776;
+          </button>
+          <div className={`sidebar ${minorSidebar ? "active" : ""}`}>
+            <button
+              className="profile-info-btn close"
+              onClick={handleMinorSidebar}
+            >
+              &times;
+            </button>
             <ul className="main-ul">
               <li>
                 <Link to="#">

@@ -15,6 +15,20 @@
 .profile .container {
   display: flex;
   justify-content: space-between;
+  position: relative;
+}
+.profile .container .profile-info-btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: var(--maroon);
+  color: var(--white);
+  display: none;
+}
+.profile .container .profile-info-btn.close {
+  position: relative;
+  display: none;
 }
 
 .profile .container .account-details {
@@ -77,10 +91,26 @@
 }
 @media (max-width: 700px) {
   .profile .sidebar {
-    display: none;
+    /* display: none; */
+    position: absolute;
+    position: fixed;
+    background: var(--white);
+    left: -120%;
+    top: 48px;
+    z-index: 9;
+    transition: all 0.5s;
+  }
+  .profile .sidebar.active {
+    left: 0%;
   }
   .profile .container .account-details {
     width: 100%;
+  }
+  .profile .container .profile-info-btn {
+    display: initial;
+  }
+  .profile .container .profile-info-btn.close {
+    display: initial;
   }
 }
 @media (max-width: 522px) {

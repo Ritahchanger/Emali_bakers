@@ -277,7 +277,7 @@
     background: var(--white);
     top: 100%;
     left: -100%;
-    z-index: 9;
+    z-index: 999;
     width: 250px;
     height: calc(100vh - 50px);
     transition: all 0.5s;
