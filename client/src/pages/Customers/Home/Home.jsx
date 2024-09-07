@@ -7,6 +7,8 @@ import Footer from "../../../components/Customers/Footer";
 import Main from "../Main/Main";
 import NavigateTop from "../../../components/NavigateTop";
 import ProductViewModal from "../../../components/Customers/modals/ProductViewModal";
+import SearchModal from "../../../components/Customers/modals/SearchModal";
+import Preloader from "../../../components/Customers/modals/Preloader";
 const Home = () => {
   return (
     <div className="home">
@@ -17,6 +19,8 @@ const Home = () => {
       <Testimonials />
       <NavigateTop />
       <ProductViewModal />
+      <SearchModal />
+      <Preloader />
       <Footer />
     </div>
   );

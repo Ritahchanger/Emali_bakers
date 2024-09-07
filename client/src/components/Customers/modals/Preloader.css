@@ -1,0 +1,43 @@
+/* Preloader.css */
+.preloader-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f7f7;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+.preloader-container.active {
+  display: flex;
+}
+
+.spinner {
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.preloader-container p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #555;
+  font-family: "Arial", sans-serif;
+}

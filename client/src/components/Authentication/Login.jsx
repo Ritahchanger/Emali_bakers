@@ -1,7 +1,11 @@
 import "./Authentication.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faLock, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faLock,
+  faArrowLeft,
+} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { BiShow } from "react-icons/bi";
 import { GrHide } from "react-icons/gr";
@@ -18,7 +22,8 @@ const Login = () => {
   };
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+]).{8,}$/;
+  const passwordRegex =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+]).{8,}$/;
 
   const validate = () => {
     let tempErrors = {};
@@ -29,8 +34,8 @@ const Login = () => {
       isValid = false;
     }
 
-    if (!passwordRegex.test(password)) {
-      tempErrors["password"] = "Password must contain at least 8 characters, including uppercase, lowercase, number, and special character.";
+    if (!password.trim().length <= 1) {
+      tempErrors["password"] = "Please enter password";
       isValid = false;
     }
 
@@ -100,7 +105,9 @@ const Login = () => {
             <span className="password-controls" onClick={handleShowPassword}>
               {!showPassword ? <BiShow /> : <GrHide />}
             </span>
-            {errors.password && <p className="error-message">{errors.password}</p>}
+            {errors.password && (
+              <p className="error-message">{errors.password}</p>
+            )}
           </div>
 
           <div className="input_group">

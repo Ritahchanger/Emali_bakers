@@ -1,0 +1,9 @@
+.modal.search-modal {
+  display: none;
+}
+.modal.search-modal.active {
+  display: flex;
+}
+.modal.search-modal .modal-wrapper {
+  box-shadow: 0 0 5px var(--white), 0 0 10px var(--white), 0 0 15px var(--white);
+}
