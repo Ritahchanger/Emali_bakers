@@ -1,4 +1,5 @@
 .modal.search-modal {
+     background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
   display: none;
 }
 .modal.search-modal.active {
