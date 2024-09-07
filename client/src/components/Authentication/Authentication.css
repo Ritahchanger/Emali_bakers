@@ -61,7 +61,9 @@
 
   border-bottom: 1px solid var(--faintGray);
 
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+
+  padding-bottom: 0rem;
   position: relative;
 }
 .authentication-container .input-group.password {
@@ -75,6 +77,7 @@
 
 .authentication-container.login .input-group p {
   font-size: 1.4rem;
+  position: relative;
 }
 
 .authentication-container .input_group {
@@ -115,4 +118,12 @@
   cursor: pointer;
   background: var(--maroon);
   color: var(--white);
+}
+
+.authentication-container.login .input-group .error-message {
+  position: absolute;
+  left: 0;
+  font-size: 12px;
+  bottom: -30px;
+  color: var(--redPink);
 }
