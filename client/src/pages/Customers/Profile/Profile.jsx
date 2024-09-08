@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Navbar from "../../../components/Customers/Navbar";
 
@@ -28,6 +28,14 @@ const Profile = () => {
   const handleMinorSidebar = () => {
     setMinorSidebar((previous) => !previous);
   };
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+
+      behavior: "smooth",
+    });
+  }, []);
 
   return (
     <>

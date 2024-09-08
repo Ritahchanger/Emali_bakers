@@ -5,8 +5,21 @@ import { useParams } from "react-router-dom";
 import "./Products.css";
 import ProductViewModal from "../../../components/Customers/modals/ProductViewModal";
 import NavigateTop from "../../../components/NavigateTop";
+import SearchModal from "../../../components/Customers/modals/SearchModal";
+import { useEffect } from "react";
 const ProductPage = () => {
   const { product_name } = useParams();
+
+  useEffect(() => {
+    window.scrollTo(
+      {
+        top: 0,
+
+        behavior: "smooth",
+      }
+    
+    );
+  },[]);
 
   return (
     <div className="products">
@@ -42,6 +55,7 @@ const ProductPage = () => {
       </div>
       <ProductViewModal />
       <NavigateTop />
+      <SearchModal />
       <Footer />
     </div>
   );

@@ -1,0 +1,9 @@
+.not-found .container.main {
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 60px);
+  align-items: center;
+}
+.not-found .container.main h3 {
+  font-size: 4rem;
+}

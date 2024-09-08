@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Navbar from "../../../components/Customers/Navbar";
 
@@ -14,9 +14,23 @@ import NavigateTop from "../../../components/NavigateTop";
 
 import ProductViewModal from "../../../components/Customers/modals/ProductViewModal";
 
+import SearchModal from "../../../components/Customers/modals/SearchModal";
 
+import Preloader from "../../../components/Customers/modals/Preloader";
 
 const Cart = () => {
+
+  useEffect(() => {
+
+    window.scrollTo({
+
+      top: 0,
+
+      behavior: "smooth",
+    });
+
+  }, []);
+
   return (
     <div className="cart">
       <Navbar />
@@ -27,8 +41,10 @@ const Cart = () => {
           <Summary />
         </div>
       </div>
+      <SearchModal />
       <NavigateTop />
       <ProductViewModal />
+      <Preloader/>
       <Footer />
     </div>
   );

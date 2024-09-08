@@ -16,6 +16,9 @@ import Profile from "./pages/Customers/Profile/Profile";
 
 import ProductPage from "./pages/Customers/Product/ProductPage";
 
+import CheckOutSuccess from "./components/CheckOutSuccess";
+
+import NotFound from "./pages/NotFound";
 
 const App = () => {
   return (
@@ -24,11 +27,17 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/customer/checkout" element={<Checkout />} />
         <Route path="/customer/cart" element={<Cart />} />
+
+        <Route path="/checkout/success" element={<CheckOutSuccess />} />
         <Route path="/authentication/login" element={<Login />} />
         <Route path="/authentication/signup" element={<Signup />} />
         <Route path="/account/profile" element={<Profile />} />
-        <Route path="/account/products/:product_name" element={<ProductPage />} />
+        <Route
+          path="/account/products/:product_name"
+          element={<ProductPage />}
+        />
         <Route path="/account/products/" element={<ProductPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

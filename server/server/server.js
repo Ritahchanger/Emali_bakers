@@ -8,7 +8,7 @@ const connectDb = require("../database/Database");
 
 const PORT = process.env.PORT || 5000;
 
-const CustomerRoute = require("../routes/CustomerRoute");
+
 
 const cors = require("cors");
 
@@ -33,8 +33,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use(StatusCode500);
 
 
+const CustomerRoute = require("../routes/CustomerRoute");
+
+const PaymentRoute  = require("../routes/PaymentRoute");
+
 
 app.use('/api/customers',CustomerRoute);
+
+
+app.use('/api/payment',PaymentRoute);
+
+
 
 
 

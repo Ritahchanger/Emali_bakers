@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import Navbar from "../../../components/Customers/Navbar";
 import Hero from "./Hero";
 import FeaturedProducts from "./FeaturedProducts";
@@ -10,6 +10,13 @@ import ProductViewModal from "../../../components/Customers/modals/ProductViewMo
 import SearchModal from "../../../components/Customers/modals/SearchModal";
 import Preloader from "../../../components/Customers/modals/Preloader";
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     <div className="home">
       <Navbar />

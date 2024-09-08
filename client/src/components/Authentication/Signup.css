@@ -6,22 +6,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
 
   margin: 0 auto;
-  margin-top: 2rem;
 }
 .authentication-container {
-  max-width: 1300px;
+  max-width: 1400px;
 }
 .authentication-container p {
   font-size: 0.9rem;
   margin: 1rem 0rem;
 }
 .authentication-container.signup form {
-  max-width: 1200px;
+  max-width: 1350px;
   background: var(--white);
-  padding:1rem;
+  padding: 1rem;
 }
 .authentication-container.signup .section {
   width: 100%;
@@ -42,6 +41,13 @@
 .authentication-container.signup .row .input-group {
   flex-basis: calc(33.33% - 10px);
   margin: 10px 0rem;
+  position: relative;
+}
+
+.authentication-container.signup .row .input-group .error {
+  position: absolute;
+  bottom: -50px;
+  color: var(--redPink);
 }
 
 .authentication-container.signup .row .input-group input {
@@ -86,11 +92,17 @@
   }
   .authentication-container.signup .row {
     grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 1rem;
   }
   .authentication-container form p {
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
     border-bottom: 1px solid var(--maroon);
+  }
+  .authentication-container.signup .row .input-group .error {
+    border: none;
+
+    bottom: -30px;
   }
   .authentication-container.signup .row.rich {
     grid-template-columns: repeat(1, 1fr);
