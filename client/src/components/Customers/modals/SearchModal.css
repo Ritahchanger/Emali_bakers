@@ -1,5 +1,5 @@
 .modal.search-modal {
-     background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
   display: none;
 }
 .modal.search-modal.active {
@@ -7,4 +7,19 @@
 }
 .modal.search-modal .modal-wrapper {
   box-shadow: 0 0 5px var(--white), 0 0 10px var(--white), 0 0 15px var(--white);
+}
+.modal.search-modal .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+@media (max-width: 494px) {
+  .modal.search-modal .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 414px) {
+  .modal.search-modal .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
