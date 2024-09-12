@@ -8,8 +8,6 @@ const connectDb = require("../database/Database");
 
 const PORT = process.env.PORT || 5000;
 
-
-
 const cors = require("cors");
 
 const helmet = require("helmet");
@@ -20,7 +18,13 @@ const cookieParser = require("cookie-parser");
 
 const { StatusCode500 } = require("../middlewares/StatusCodes");
 
+const errorHandler = require("../middlewares/errorHandler");
+
+const authenticateToken = require("../middlewares/AuthenticateToken")
+
 app.use(express.json());
+
+
 
 app.use(morgan("combined"));
 
@@ -37,8 +41,19 @@ const CustomerRoute = require("../routes/CustomerRoute");
 
 const PaymentRoute  = require("../routes/PaymentRoute");
 
+const AuthenticationRoute = require("../routes/AuthenticationRoute");
+
+
+
+
+
+
+
+app.use('/api/authentication',AuthenticationRoute);
 
 app.use('/api/customers',CustomerRoute);
+
+// app.use('/api/customers',authenticateToken,CustomerRoute);
 
 
 app.use('/api/payment',PaymentRoute);

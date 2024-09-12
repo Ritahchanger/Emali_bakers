@@ -1,5 +1,5 @@
 const Customer = require("../models/Customer.model");
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt");
 
 const RegisterCompany = async (req, res, next) => {
   try {
@@ -44,8 +44,11 @@ const RegisterCompany = async (req, res, next) => {
       });
     }
 
-    const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash(req.body.password, salt);
+    const clientPassword = req.body.password;
+
+    console.log(clientPassword)
+
+    const hashedPassword = await bcrypt.hash(clientPassword, 10);
 
     const newCustomer = new Customer({
       businessName: req.body.bName,
@@ -70,7 +73,7 @@ const RegisterCompany = async (req, res, next) => {
       success: true,
       message: "Business registered successfully",
     });
-  } catch (error) {
+  } catch (error) {1
     next(error);
   }
 };

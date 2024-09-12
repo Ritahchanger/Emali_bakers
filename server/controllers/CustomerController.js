@@ -1,5 +1,7 @@
 const Customer = require("../models/Customer.model");
 
+const asyncWrapper = require("../middlewares/asyncWrapper");
+
 const { StatusCode404, StatusCode200 } = require("../middlewares/StatusCodes");
 
 const getCustomers = async (req, res, next) => {
