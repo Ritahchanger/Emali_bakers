@@ -11,6 +11,9 @@ import Footer from "../../../components/Customers/Footer";
 import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import SearchModal from "../../../components/Customers/modals/SearchModal";
+
 import {
   faUserCircle,
   faBox,
@@ -141,6 +144,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
+      <SearchModal />
       <Footer />
     </>
   );
