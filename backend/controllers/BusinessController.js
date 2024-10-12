@@ -22,7 +22,9 @@ const registerBusiness = async (req,res,next) =>{
             phoneNumber,
             userName,
             password, 
+            
             deliveryDays,
+
           } = req.body;
 
     const existingEmail = await Business.findOne({businessEmail});
