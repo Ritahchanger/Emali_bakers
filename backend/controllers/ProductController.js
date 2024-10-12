@@ -7,7 +7,7 @@ const createProduct = async (req, res, next) => {
     try {
         const { productName, description, price, quantity, category } = req.body;
 
-        const images = req.images;
+        const images = req.files;
 
         const existingProduct = await Product.findOne({ productName: productName.toLowerCase() });
 
@@ -24,15 +24,9 @@ const createProduct = async (req, res, next) => {
 
             const fileRef = bucket.file(`${folder}${fileName}`);
 
-            await fileRef.save(image.buffer, {
+            await fileRef.save(image.buffer
 
-                metadata: {
-
-                    contentType: image.mimetype,
-
-                },
-
-            });
+            );
 
             const [downloadUrl] = await fileRef.getSignedUrl({
 
@@ -72,6 +66,8 @@ const createProduct = async (req, res, next) => {
 
     }
 };
+
+
 
 module.exports = {
 
