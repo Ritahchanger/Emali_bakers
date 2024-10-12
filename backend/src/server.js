@@ -30,6 +30,7 @@ const firebaseConfig = JSON.parse(process.env.FIREBASE_CREDENTIALS)
 admin.initializeApp({
 
     credential:admin.credential.cert(firebaseConfig),
+    
 
     storageBucket:process.env.STORAGE_BUCKET
 
@@ -39,6 +40,8 @@ admin.initializeApp({
 
 
 const BusinessRoute = require("../routes/BusinessRoute");
+
+const ProductRoute = require("../routes/ProductRoute");
 
 
 
@@ -51,6 +54,8 @@ app.get('/',(req,res)=>{
 })
 
 app.use('/api/auth/business',BusinessRoute);
+
+app.use('/api/auth/business',ProductRoute);
 
 
 app.listen(PORT, async ()=>{
