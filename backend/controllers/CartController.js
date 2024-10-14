@@ -99,9 +99,36 @@ const updateItemQuantity = async (req,res,next) => {
 
     }
 
+}
+
+const removeCartItem = async (req,res,next) =>{
+
+    try{
+
+        const { userId,productId } = req.body;
+
+        const cart = await Cart.findOne({user:userId});
+
+        if(!cart){
+
+            return res.status(200).json({status:200,success:false, message:'Cart not found'});
+
+        }
+
+        cart.items = cart.items.filter(item=>item.product.toString()!==productId);
+
+        await cart.save();
+
+        res.status(200).json({success:true,status:200,data:cart});
+
+    }catch(error){
+
+       next(error)
+
+    }
 
 }
 
 
 
-module.exports = { getCartItems,updateItemQuantity }
+module.exports = { getCartItems,updateItemQuantity,removeCartItem }
