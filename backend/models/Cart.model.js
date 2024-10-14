@@ -21,13 +21,18 @@ const cartItems = new mongoose.Schema(
 
 const CartSchema = new mongoose.Schema(
   {
-    business: {},
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+
+      ref: "Business",
+
+      required: true,
+    },
     items: [cartItems],
   },
   { timestamps: true }
 );
 
+const Cart = mongoose.model("Cart", CartSchema);
 
-const Cart = mongoose.model("Cart",CartSchema)
-
-module.exports = Cart
+module.exports = Cart;
