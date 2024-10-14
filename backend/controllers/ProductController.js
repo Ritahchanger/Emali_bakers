@@ -69,11 +69,54 @@ const createProduct = async (req, res, next) => {
 
 
 
-module.exports = {
+const getProducts = async (req,res,next) =>{
 
-    createProduct,
+    try{
 
-};
+        const products = await Product.find({})
+
+        if(!products){
+
+            return res.status(200).json({status:404,success:false,message:'Products not found'})
+
+        }
+
+        res.status(200).json({status:200,success:true,data:products});
 
 
-module.exports = { createProduct }
+    }catch(error){
+
+        next(error)
+
+    }
+
+}
+
+
+const getProductById = async (req,res,next) =>{
+
+    try{
+
+        const { id } = req.params;
+
+        const product = await Product.findById(id);
+
+        if(!product){
+
+            return res.status(200).json({status:404,success:false,message:"The product not found"});
+
+        }else{
+
+            return res.status(200).json({status:200,success:true,product})
+
+        }
+
+    }catch(error){
+
+        next(error)
+
+    }
+
+}
+
+module.exports = { createProduct,getProductById,getProducts };

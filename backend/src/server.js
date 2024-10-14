@@ -55,7 +55,7 @@ app.get('/',(req,res)=>{
 
 app.use('/api/auth/business',BusinessRoute);
 
-app.use('/api/auth/business',ProductRoute);
+app.use('/api/business',ProductRoute);
 
 
 app.listen(PORT, async ()=>{
