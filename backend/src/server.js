@@ -44,6 +44,9 @@ const BusinessRoute = require("../routes/BusinessRoute");
 const ProductRoute = require("../routes/ProductRoute");
 
 
+const CartRoute = require("../routes/CartRoute");
+
+
 
 app.get('/',(req,res)=>{
 
@@ -56,6 +59,8 @@ app.get('/',(req,res)=>{
 app.use('/api/auth/business',BusinessRoute);
 
 app.use('/api/business',ProductRoute);
+
+app.use('/api/cart',CartRoute);
 
 
 app.listen(PORT, async ()=>{
