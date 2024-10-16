@@ -23,7 +23,6 @@ body {
   --darkGray: #676767;
   --customBg: rgba(0, 0, 0, 0.75);
   --slate: #cbd5e1;
-
 }
 
 .gradient {
@@ -51,23 +50,21 @@ body {
   opacity: 0.15;
 }
 
-
-body{
-  /* background:var(--slate); */
-  background-image: radial-gradient(
-    at 27% 37%,
-    hsla(215, 98%, 61%, 1) 0px,
-    transparent 0%
-  ),
-  radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
-  radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
-  radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
-  radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
-  radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
-  radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+body {
+  background:var(--slate);
+  /* background-image: radial-gradient(
+      at 27% 37%,
+      hsla(215, 98%, 61%, 1) 0px,
+      transparent 0%
+    ),
+    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%); */
   /* filter: blur(100px) saturate(150%); */
 }
-
 
 ::-webkit-scrollbar {
   width: 3px;
@@ -159,7 +156,7 @@ img {
   text-align: center;
   flex-direction: column;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-  background:var(--white);
+  background: var(--white);
 }
 
 input,
@@ -239,7 +236,7 @@ img {
   transition: all 0.5s;
 }
 .empty {
-  padding-top:70px;
+  padding-top: 70px;
 }
 
 @media (max-width: 716px) {
@@ -277,6 +274,10 @@ img {
 .table-wrapper {
   max-width: 100%;
   overflow-x: auto; /* Enables horizontal scrolling if content overflows */
+}
+.admin-dashboard {
+  background: #f2f2f2;
+  width:100%;
 }
 
 /* Existing table styles */

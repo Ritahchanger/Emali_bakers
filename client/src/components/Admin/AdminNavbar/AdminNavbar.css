@@ -15,11 +15,22 @@
 
   padding: 0 2rem;
 
+  padding-left: 0;
+
   position: fixed;
 
   width: 100%;
 
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+}
+.admin.navbar .left-container {
+  width: 250px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: var(--header3);
+  padding-left: 2rem;
+  position: relative;
 }
 
 .admin.navbar .right-container .profile-container button {
@@ -40,6 +51,24 @@
   justify-content: space-between;
   align-items: center;
 }
+.admin.navbar .left-container .menu-icon {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translate(-50%, -50%);
+  border: none;
+  background: transparent;
+  color: var(--white);
+  cursor: pointer;
+  font-weight: 700;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--white);
+  border-radius: 8px;
+}
 .admin.navbar .right-container .drop-down {
   position: absolute;
 
@@ -48,11 +77,14 @@
   border-top: 2px solid #000;
 
   top: 100%;
+
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
 }
 .admin.navbar .logo a {
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 2px;
+  color: var(--white);
 }
 .admin.navbar ul {
   width: 100%;

@@ -1,20 +1,42 @@
-.admin.sidebar{
-    background:var(--white);
-    height:calc(100vh - 50px);
-    max-width:250px;
+.admin.sidebar {
+  background: var(--white);
+  height: calc(100vh - 50px);
+  width: 250px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  /* display: none */
+  left:-200%;
+  transition:all 0.5s;
+  position:fixed;
 }
 
-.admin.sidebar .sidebar-content li a{ 
-
-    display:block;
-
-    padding:0.7rem 2rem;
-
-    border-bottom:1px solid var( --darkGray);
-
+.admin.sidebar.active {
+  /* display: block; */
+  left:0;
 }
-.admin.sidebar .sidebar-content li:hover a{
-    background:var( --maroon);
 
-    color:var(--white);
+.admin.sidebar .sidebar-content li a span {
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.admin.sidebar .sidebar-content li a {
+  display: flex;
+
+  align-items: center;
+
+  text-align: start;
+
+  padding: 0.7rem 2rem;
+
+  border-bottom: 1px solid var(--darkGray);
+
+  transition: all 0.5s;
+
+  align-content: center;
+}
+.admin.sidebar .sidebar-content li:hover a {
+  background: var(--maroon);
+
+  color: var(--white);
 }

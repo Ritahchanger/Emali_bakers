@@ -9,6 +9,8 @@ import PreloaderSlice from "./PreloaderSlice"
 
 import SearchSlice  from "./SearchSlice"
 
+import AdminSidebarSlice from "./AdminSidebarSlice"
+
 
 export default configureStore({
 
@@ -19,7 +21,9 @@ export default configureStore({
 
         preloader:PreloaderSlice.reducer,
 
-        search:SearchSlice.reducer
+        search:SearchSlice.reducer,
+
+        adminSidebar:AdminSidebarSlice.reducer
 
 
     },

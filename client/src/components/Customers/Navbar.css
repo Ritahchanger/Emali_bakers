@@ -147,6 +147,7 @@
 }
 .nav .container .profile-icon .account-navigator a {
   display: block;
+  margin-bottom:10px;
 }
 .nav .container .profile-icon .account-navigator a button {
   border: none;
@@ -157,9 +158,7 @@
   letter-spacing: 2px;
   cursor: pointer;
 }
-.nav .container .profile-icon .account-navigator a:nth-child(2) {
-  margin-top: 1.5rem;
-}
+
 .nav .container .profile-icon .credential-buttons.mobile {
   margin-right: 1rem;
 }

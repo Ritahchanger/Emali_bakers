@@ -1,36 +1,93 @@
 import "./AdminSidebar.css";
-
+import { MdDashboard } from "react-icons/md";
+import { ImUsers } from "react-icons/im";
+import { FaBoxOpen } from "react-icons/fa";
+import { LuFiles } from "react-icons/lu";
+import { FaBell } from "react-icons/fa";
+import { FaBitcoin } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { FaGear } from "react-icons/fa6";
+import { useSelector } from "react-redux";
 const AdminSidebar = () => {
+  const isSidebarOpen = useSelector(
+    (state) => state.adminSidebar.displaySidebar
+  );
+
   return (
-    <div className="admin sidebar">
+    <div className={`admin sidebar ${isSidebarOpen ? "active" : ""}`}>
       <div className="sidebar-content">
         <ul>
           <li>
-            <a href="/admin/dashboard">Dashboard</a>
+            <Link to="/admin/dashboard">
+              <span>
+                <MdDashboard />
+              </span>
+              Dashboard
+            </Link>
           </li>
           <li>
-            <a href="/admin/users">Manage Users</a>
+            <Link to="/admin/users">
+              <span>
+                <ImUsers />
+              </span>
+              Manage Users
+            </Link>
           </li>
           <li>
-            <a href="/admin/products">Manage Products</a>
+            <Link to="/admin/products">
+              <span>
+                <FaBoxOpen />
+              </span>
+              Manage Products
+            </Link>
           </li>
           <li>
-            <a href="/admin/orders">Manage Orders</a>
+            <Link to="/admin/products">
+              <span>
+                <FaBoxOpen />
+              </span>
+              Manage Orders
+            </Link>
           </li>
           <li>
-            <a href="/admin/deliveries">Manage Deliveries</a>
+            <Link to="/admin/deliveries">
+              <span>
+                <FaBoxOpen />
+              </span>
+              Manage Deliveries
+            </Link>
           </li>
           <li>
-            <a href="/admin/payments">Manage Payments</a>
+            <Link to="/admin/payments">
+              <span>
+                <FaBitcoin />
+              </span>
+              Manage Payments
+            </Link>
           </li>
           <li>
-            <a href="/admin/reports">View Reports</a>
+            <Link to="/admin/reports">
+              <span>
+                <LuFiles />
+              </span>
+              Reports
+            </Link>
           </li>
           <li>
-            <a href="/admin/notifications">Notifications</a>
+            <Link to="/admin/notification">
+              <span>
+                <FaBell />
+              </span>
+              Notifications
+            </Link>
           </li>
           <li>
-            <a href="/admin/settings">Settings</a>
+            <Link to="/admin/deliveries">
+              <span>
+                <FaGear />
+              </span>
+              Settings
+            </Link>
           </li>
         </ul>
       </div>
