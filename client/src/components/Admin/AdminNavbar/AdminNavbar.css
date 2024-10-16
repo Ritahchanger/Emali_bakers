@@ -22,6 +22,7 @@
   width: 100%;
 
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+  z-index:99;
 }
 .admin.navbar .left-container {
   width: 250px;

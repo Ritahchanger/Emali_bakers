@@ -94,6 +94,9 @@ img {
   padding: 0 1rem;
   position: relative;
 }
+.admin-dashboard .container{
+  max-width:1500px;
+}
 .hero-btn {
   background: var(--maroon);
 
@@ -276,7 +279,7 @@ img {
   overflow-x: auto; /* Enables horizontal scrolling if content overflows */
 }
 .admin-dashboard {
-  background: #f2f2f2;
+  /* background: #f2f2f2; */
   width:100%;
 }
 

@@ -3,7 +3,7 @@ import FoodImage from "../../assets/images/assets/food_16.png";
 import { Link } from "react-router-dom";
 import { openProductViewModal } from "../../Redux/Features/ProductViewSlice";
 import { useDispatch, useSelector } from "react-redux";
-const ProductCard = ({ product }) => {
+const ProductCard = () => {
   const dispatch = useDispatch();
   const handleDisplayProductModal = (data) => {
     dispatch(openProductViewModal(data));
@@ -14,8 +14,8 @@ const ProductCard = ({ product }) => {
         <img src={FoodImage} alt={"Hamburger"} />
       </div>
       <div className="card-body">
-        <p className="food-name">{product?.productName | `Hamburger`}</p>
-        <p className="price">{product?.price | `sh.1200`}</p>
+        <p className="food-name">{`Hamburger`}</p>
+        <p className="price">{`sh.1200`}</p>
         <Link
           to="#"
           onClick={() => {

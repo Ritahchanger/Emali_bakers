@@ -64,14 +64,20 @@ const ProductPage = () => {
           {product_name?.toUpperCase() || "SNACKS"}
         </p>
         <div className="products-grid">
-          {products.map((product) => (
-            <ProductCard key={product._id} product={product} />
-          ))}
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
         </div>
 
         <div className="related-products">
           <p className="medium-header">{"Related products"}</p>
           <div className="products-grid">
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
             <ProductCard />
             <ProductCard />
             <ProductCard />
