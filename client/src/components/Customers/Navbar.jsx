@@ -21,6 +21,9 @@ import { useDispatch } from "react-redux";
 
 
 const Navbar = () => {
+
+  const isAdmin = !!localStorage.getItem("role") || true;
+
   const dispatch = useDispatch();
 
   const [sidebar, showSidebar] = useState(false);
@@ -203,6 +206,9 @@ const Navbar = () => {
               </Link>
               <Link to="/authentication/login">
                 <button>Login</button>
+              </Link>
+              <Link to="/authentication/login">
+                <button>Admin</button>
               </Link>
             </div>
           )}

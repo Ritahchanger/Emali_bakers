@@ -1,21 +1,47 @@
 import "./Authentication.css";
 
+import { adminHomePath } from "../../PathStore/AdminPath";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
   faLock,
   faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+import { useSelector, useDispatch } from "react-redux";
+
 import { BiShow } from "react-icons/bi";
 import { GrHide } from "react-icons/gr";
 import { useState } from "react";
 
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+
+import {
+  openPreloader,
+  closePreloader,
+} from "../../Redux/Features/PreloaderSlice";
+
+import Preloader from "../Customers/modals/Preloader";
+
+const MySwal = withReactContent(Swal);
+
 const Login = () => {
+  const dispatch = useDispatch();
+
+  const preloaderLoading = useSelector(
+    (state) => state.preloader.displayPreloader
+  );
+
+  const isAdmin = !!localStorage.getItem("role") || true;
+  const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
+  const navigate = useNavigate(); // useNavigate for redirection
 
   const handleShowPassword = () => {
     setShowPassword((previous) => !previous);
@@ -34,8 +60,8 @@ const Login = () => {
       isValid = false;
     }
 
-    if (!password.trim().length <= 1) {
-      tempErrors["password"] = "Please enter password";
+    if (!password.trim().length) {
+      tempErrors["password"] = "Please enter password.";
       isValid = false;
     }
 
@@ -46,14 +72,24 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      console.log(`Form submitted successfully.`);
+      MySwal.fire({
+        title: <p>Success!</p>,
+        text: "Redirecting to admin dashboard",
+        icon: "success",
+      }).then(() => {
+        dispatch(openPreloader());
+
+        setTimeout(() => {
+          dispatch(closePreloader());
+
+          navigate(adminHomePath.path);
+        }, 5000);
+      });
     }
   };
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
-
-    // Remove email error when user starts typing again
     if (errors.email) {
       setErrors((prevErrors) => ({ ...prevErrors, email: "" }));
     }
@@ -61,8 +97,6 @@ const Login = () => {
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
-
-    // Remove password error when user starts typing again
     if (errors.password) {
       setErrors((prevErrors) => ({ ...prevErrors, password: "" }));
     }
@@ -109,10 +143,15 @@ const Login = () => {
               <p className="error-message">{errors.password}</p>
             )}
           </div>
-
           <div className="input_group">
-            <input type="submit" value="LOGIN" className="submit-btn" />
+            <input
+              type="submit"
+              value={`${"LOGIN"}`}
+              className="submit-btn"
+              disabled={loading} // Disable button while loading
+            />
           </div>
+
           <div className="formFooter">
             <p>
               <Link to="#">Forgot password?</Link>
@@ -123,6 +162,7 @@ const Login = () => {
           </div>
         </form>
       </div>
+      {preloaderLoading && <Preloader />}
     </div>
   );
 };

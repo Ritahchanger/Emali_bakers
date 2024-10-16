@@ -19,6 +19,7 @@ import ProductPage from "./pages/Customers/Product/ProductPage";
 import CheckOutSuccess from "./components/CheckOutSuccess";
 
 import NotFound from "./pages/NotFound";
+import { adminHomePath } from "./PathStore/AdminPath";
 
 const App = () => {
   return (
@@ -38,6 +39,7 @@ const App = () => {
         />
         <Route path="/account/products/" element={<ProductPage />} />
         <Route path="*" element={<NotFound />} />
+        <Route path={adminHomePath.path} element={adminHomePath.element} />
       </Routes>
     </BrowserRouter>
   );

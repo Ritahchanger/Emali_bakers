@@ -13,7 +13,10 @@ const Preloader = () => {
       className={`preloader-container ${displayPreloader ? "active" : null}`}
     >
       <div className="spinner"></div>
-      <p>Loading...</p>
+      <p style={{
+
+        color:"#fff"
+      }}>Loading...</p>
     </div>
   );
 };

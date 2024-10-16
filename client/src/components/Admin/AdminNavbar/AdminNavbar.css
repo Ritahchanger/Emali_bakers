@@ -1,0 +1,73 @@
+.admin.navbar {
+  display: flex;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  height: 50px;
+
+  background: #fff;
+
+  padding: 0 2rem;
+
+  position: fixed;
+
+  width: 100%;
+
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+}
+
+.admin.navbar .right-container .profile-container button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.admin.navbar .right-container .profile-container button span {
+  font-size: 1.4rem;
+}
+.admin.navbar .right-container .profile-container .dropdown-arrow {
+  margin-left: 2rem;
+}
+.admin.navbar .right-container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.admin.navbar .right-container .drop-down {
+  position: absolute;
+
+  background: var(--white);
+
+  border-top: 2px solid #000;
+
+  top: 100%;
+}
+.admin.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.admin.navbar ul {
+  width: 100%;
+}
+.admin.navbar li {
+  width: 100%;
+  transition: all 0.5;
+}
+.admin.navbar li:hover {
+  background: var(--maroon);
+}
+.admin.navbar li:hover a {
+  color: var(--white);
+}
+.admin.navbar li a {
+  display: block;
+  padding: 0.5rem 1.7rem;
+}

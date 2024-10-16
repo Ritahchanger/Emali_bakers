@@ -1,0 +1,20 @@
+.admin.sidebar{
+    background:var(--white);
+    height:calc(100vh - 50px);
+    max-width:250px;
+}
+
+.admin.sidebar .sidebar-content li a{ 
+
+    display:block;
+
+    padding:0.7rem 2rem;
+
+    border-bottom:1px solid var( --darkGray);
+
+}
+.admin.sidebar .sidebar-content li:hover a{
+    background:var( --maroon);
+
+    color:var(--white);
+}
