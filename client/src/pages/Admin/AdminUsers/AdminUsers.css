@@ -11,36 +11,79 @@
 .admin-dashboard .users-container .table-wrapper {
   padding: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  max-height: calc(100vh - 60px);
+  max-height: calc(100vh - 200px);
   overflow-y: scroll;
 }
 
 .admin-dashboard {
   background: var(--white);
 }
-.admin-dashboard .users-container table thead {
+.admin-dashboard table thead {
   background: var(--redPink);
 }
 
-.admin-dashboard .users-container th,
+.admin-dashboard th,
 td {
   padding: 8px;
   text-align: left;
   border: 1px so lid #ddd;
 }
 
-.admin-dashboard .users-container .utility-btn.delete {
+.admin-dashboard .utility-btn.delete {
   background: var(--redPink);
   border: none;
 }
-.admin-dashboard .users-container .utility-btn span {
+.admin-dashboard .utility-btn span {
   color: var(--white);
 }
-.admin-dashboard .users-container .utility-btn.edit {
+.admin-dashboard .utility-btn.edit {
   background: var(--colorGreen);
 }
 
-.admin-dashboard .users-container th {
+.admin-dashboard th {
   background-color: var(--header3);
   color: white;
+}
+
+.admin-dashboard .users-container .sub-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--colorGreen);
+  margin: 1rem 0rem;
+}
+
+.admin-dashboard .company-officials .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  grid-gap: 20px;
+
+  margin-bottom: 1rem;
+}
+.admin-dashboard .users-container .title {
+  margin: 1rem 0rem;
+  font-size: 1.3rem;
+}
+
+.admin-dashboard .company-officials table thead {
+  background: var(--header3);
+}
+.admin-dashboard .company-officials table thead tr td {
+  color: var(--white);
+}
+
+.admin-dashboard .card-table-wrapper {
+  width: 100%;
+  overflow-x:scroll;
+}
+
+.admin-dashboard .card-table-wrapper table {
+  min-width: 400px;
+  width:100%;
+}
+
+@media (max-width: 1000px) {
+  .admin-dashboard .company-officials .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

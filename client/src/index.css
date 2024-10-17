@@ -158,6 +158,13 @@ img {
   border: 2px solid var(--maroon);
   transition: all 0.5s;
 }
+
+.title{
+  text-align:center;
+  font-size:1.7rem;
+  color:var(--colorGreen);
+  font-weight:700;
+}
 .card button:hover {
   background: transparent;
   color: var(--maroon);
