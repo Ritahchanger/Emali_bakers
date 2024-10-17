@@ -11,6 +11,8 @@
 .admin-dashboard .users-container .table-wrapper{
     padding:10px;
     box-shadow:0 0 5PX rgba(0, 0, 0, 0.5);
+    max-height:calc(100vh - 60px);
+    overflow-y: scroll;
 }
 
 .admin-dashboard {
