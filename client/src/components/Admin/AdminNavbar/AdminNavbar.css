@@ -150,3 +150,29 @@
   display: block;
   padding: 0.5rem 1.7rem;
 }
+
+
+@media(max-width:632px){
+  .admin.navbar .input-search{
+    display:none;
+  }
+  .admin.navbar .right-container .profile-container .dropdown-arrow{
+    margin-left:0.5rem;
+  }.admin.navbar .right-container .profile-container .dropdown-arrow span{
+    border:none;
+  }
+  .admin.navbar .right-container .profile-container .dropdown-arrow {
+    border:none;
+  }
+  .admin.navbar .right-container .drop-down{
+    right:0rem;
+  }
+  .admin.navbar .logo a {
+    font-size:1.25rem;
+  }
+  .admin.navbar .left-container{
+    padding-left:1rem;
+  }.admin.navbar .right-container .profile-container .dropdown-arrow{
+    margin-right:-1rem;
+  } 
+}
