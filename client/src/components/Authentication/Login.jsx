@@ -10,6 +10,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link, useNavigate } from "react-router-dom";
 
+import { adminDashboard } from "../../PathStore/AdminPath";
+
 import { useSelector, useDispatch } from "react-redux";
 
 import { BiShow } from "react-icons/bi";
@@ -82,7 +84,7 @@ const Login = () => {
         setTimeout(() => {
           dispatch(closePreloader());
 
-          navigate(adminHomePath.path);
+          navigate(adminDashboard.path);
         }, 5000);
       });
     }

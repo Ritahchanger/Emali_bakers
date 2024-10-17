@@ -21,6 +21,8 @@ import CheckOutSuccess from "./components/CheckOutSuccess";
 import NotFound from "./pages/NotFound";
 import { adminHomePath, manageUsers } from "./PathStore/AdminPath";
 
+import { adminDashboard } from "./PathStore/AdminPath";
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -41,6 +43,7 @@ const App = () => {
         <Route path="*" element={<NotFound />} />
         <Route path={adminHomePath.path} element={adminHomePath.element} />
         <Route path={manageUsers.path} element={manageUsers.element} />
+        <Route path={adminDashboard.path} element={adminDashboard.element} />
       </Routes>
     </BrowserRouter>
   );

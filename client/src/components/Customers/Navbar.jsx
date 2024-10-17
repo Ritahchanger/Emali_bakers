@@ -19,7 +19,7 @@ import { openSearchModal,closeSearchModal } from "../../Redux/Features/SearchSli
 
 import { useDispatch } from "react-redux";
 
-import { adminHomePath } from "../../PathStore/AdminPath";
+import { adminDashboard } from "../../PathStore/AdminPath";
 
 const Navbar = () => {
 
@@ -208,7 +208,7 @@ const Navbar = () => {
               <Link to="/authentication/login">
                 <button>Login</button>
               </Link>
-              <Link to={adminHomePath.path}>
+              <Link to={adminDashboard.path}>
                 <button>Admin</button>
               </Link>
             </div>
