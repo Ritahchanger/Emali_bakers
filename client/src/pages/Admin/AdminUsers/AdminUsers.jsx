@@ -183,15 +183,69 @@ const AdminUsers = () => {
                 }}
               >
                 <tr>
-                  <th>BSS NAME</th>
-                  <th>BSS TYPE</th>
-                  <th>BSS PHONE</th>
-                  <th>BSS EMAIL</th>
-                  <th>COUNTY NAME</th>
-                  <th>CITY NAME</th>
-                  <th>STREET NAME</th>
-                  <th>CONTACT PERSON</th>
-                  <th>BUSS USERNAME</th>
+                  <th
+                    style={{
+                      background: "var(--header3)",
+                    }}
+                  >
+                    BSS NAME
+                  </th>
+                  <th
+                    style={{
+                      background: "var(--header3)",
+                    }}
+                  >
+                    BSS TYPE
+                  </th>
+                  <th
+                    style={{
+                      background: "var(--header3)",
+                    }}
+                  >
+                    BSS PHONE
+                  </th>
+                  <th
+                    style={{
+                      background: "var(--header3)",
+                    }}
+                  >
+                    BSS EMAIL
+                  </th>
+                  <th
+                    style={{
+                      background: "var(--header3)",
+                    }}
+                  >
+                    COUNTY NAME
+                  </th>
+                  <th
+                    style={{
+                      background: "var(--header3)",
+                    }}
+                  >
+                    CITY NAME
+                  </th>
+                  <th
+                    style={{
+                      background: "var(--header3)",
+                    }}
+                  >
+                    STREET NAME
+                  </th>
+                  <th
+                    style={{
+                      background: "var(--header3)",
+                    }}
+                  >
+                    CONTACT PERSON
+                  </th>
+                  <th
+                    style={{
+                      background: "var(--header3)",
+                    }}
+                  >
+                    BUSS USERNAME
+                  </th>
                 </tr>
                 <tr>
                   <th></th>

@@ -22,7 +22,7 @@
   width: 100%;
 
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
-  z-index:99;
+  z-index: 99;
 }
 .admin.navbar .left-container {
   width: 250px;
@@ -39,11 +39,52 @@
   background: transparent;
   cursor: pointer;
 }
+.admin.navbar .input-search {
+  display: flex;
+  height: 40px;
+  border: 1px solid #ababab;
+  padding: 5px;
+  align-items: center;
+  justify-content: space-between;
+}
+.admin.navbar .input-search input {
+  border: none;
+  outline: none;
+  height: 100%;
+}
+.admin.navbar .input-search button {
+  border: none;
+  background: transparent;
+}
+.admin.navbar .input-search button span {
+  font-size: 1.4rem;
+}
 .admin.navbar .right-container .profile-container button span {
   font-size: 1.4rem;
 }
+.admin.navbar .profile-container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
 .admin.navbar .right-container .profile-container .dropdown-arrow {
   margin-left: 2rem;
+  border:2px solid #000;
+  height:40px;
+  width:40px;
+}
+.admin.navbar .right-container .profile-container .dropdown-arrow span{
+  display:flex;
+  height:100%;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.8rem;
+}
+.admin.navbar .right-container .profile-container .dropdown-arrow.active {
+  transform: rotate(-180deg);
 }
 .admin.navbar .right-container {
   position: relative;
@@ -72,14 +113,19 @@
 }
 .admin.navbar .right-container .drop-down {
   position: absolute;
-
   background: var(--white);
-
   border-top: 2px solid #000;
-
+  opacity: 0;
   top: 100%;
-
+  height: 0px;
+  overflow-y: hidden;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+  transition: all 1s;
+}
+.admin.navbar .right-container .drop-down.active {
+  top: 100%;
+  height: fit-content;
+  opacity: 1;
 }
 .admin.navbar .logo a {
   font-size: 1.5rem;

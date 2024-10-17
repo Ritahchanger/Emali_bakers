@@ -6,6 +6,9 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { toggleSidebar } from "../../../Redux/Features/AdminSidebarSlice";
 
+import { IoSearch } from "react-icons/io5";
+import { useState } from "react";
+
 const AdminNavbar = () => {
   const dispatch = useDispatch();
 
@@ -16,6 +19,12 @@ const AdminNavbar = () => {
   const isSidebarOpen = useSelector(
     (state) => state.adminSidebar.displaySidebar
   );
+
+  const [dropdown, setDropdown] = useState(false);
+
+  const handleDropdown = () => {
+    setDropdown((prev) => !prev);
+  };
 
   return (
     <>
@@ -36,6 +45,14 @@ const AdminNavbar = () => {
             )}
           </div>
         </div>
+        <div className="input-search">
+          <input type="text" placeholder="Enter your search..." />
+          <button>
+            <span>
+              <IoSearch />
+            </span>
+          </button>
+        </div>
         <div className="right-container">
           <div className="profile-container">
             <button>
@@ -43,12 +60,15 @@ const AdminNavbar = () => {
                 <FaUser />
               </span>
             </button>
-            <button className="dropdown-arrow">
+            <button
+              className={`dropdown-arrow ${dropdown ? "active" : ""}`}
+              onClick={handleDropdown}
+            >
               <span>
                 <IoIosArrowDropdownCircle />
               </span>
             </button>
-            <div className="drop-down">
+            <div className={`drop-down ${dropdown ? "active" : ""}`}>
               <ul>
                 <li>
                   <Link to="#">Profile</Link>
