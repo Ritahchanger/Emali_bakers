@@ -1,7 +1,7 @@
 import AdminNavbar from "../../../components/Admin/AdminNavbar/AdminNavbar";
 import AdminSidebar from "../AdminSidebar/AdminSidebar";
 import "./Dashboard.css";
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 
 import PriceFlactuation from "./PriceFlactuation";
 
@@ -27,6 +27,8 @@ ChartJS.register(
 
 const Dashboard = () => {
   const chartRef = useRef(null);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 632);
+  
   const data = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
@@ -46,6 +48,7 @@ const Dashboard = () => {
       },
     ],
   };
+
   const options = {
     responsive: true,
     plugins: {
@@ -60,17 +63,36 @@ const Dashboard = () => {
     scales: {
       y: {
         beginAtZero: true,
-        grid:{
-            display:false,
-        }
+        grid: {
+          display: false,
+        },
+        title: {
+          display: true,
+          text: isSmallScreen ? '' : 'Sales (USD)', // Hide label on small screens
+        },
       },
-      x:{
-        grid:{
-            display:false
-        }
-      }
+      x: {
+        grid: {
+          display: false,
+        },
+        title: {
+          display: !isSmallScreen, // Hide label on small screens
+          text: 'Months',
+        },
+      },
     },
   };
+
+  // Handle window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 632);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div className="admin-dashboard">
@@ -84,7 +106,7 @@ const Dashboard = () => {
           </div>
           <div className="right-side">
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam illum quasi sit mollitia deserunt incidunt veniam obcaecati perferendis necessitatibus praesentium, enim impedit eius, suscipit provident aspernatur neque debitis ea, similique id officia quisquam animi aliquam sint. Dignissimos, quaerat impedit! Repudiandae!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam illum quasi sit mollitia deserunt incidunt veniam obcaecati perferendis necessitatibus praesentium, enim impedit eius, suscipit provident aspernatur neque debitis ea, similique id officia quisquam animi aliquam sint. Dignissimos, quaerat impedit! Repudiandae!
             </p>
           </div>
         </div>
