@@ -1,12 +1,39 @@
 import React from "react";
 import AdminNavbar from "../../../components/Admin/AdminNavbar/AdminNavbar";
 import AdminSidebar from "../AdminSidebar/AdminSidebar";
-
 import "./AdminUsers.css";
-
 import dummyData from "../../../Data/UsersDummyData";
-
+import { FaEdit, FaTrash } from "react-icons/fa";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+const MySwal = withReactContent(Swal);
 const AdminUsers = () => {
+  const handleEdit = () => {
+    MySwal.fire({
+      title: "Edit User",
+      input: "text",
+      inputLabel: "Edit username",
+      inputValue: "DennisPeter",
+      showCancelButton: true,
+      confirmButtonText: "Save",
+      preConfirm: (newUsername) => {
+        console.log("Edited username:", newUsername);
+      },
+    });
+  };
+
+  const handleDelete = () => {
+    MySwal.fire({
+      title: "Are you sure?",
+      text: `Do you want to delete Dennis?`,
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "Yes, delete it!",
+    });
+  };
+
   return (
     <div className="admin-dashboard">
       <AdminNavbar />
@@ -15,91 +42,19 @@ const AdminUsers = () => {
         <div className="users-container">
           <div className="table-wrapper">
             <table>
-              <thead
-                style={{
-                  background: "#340290",
-                }}
-              >
+              <thead>
                 <tr>
-                  <th
-                    style={{
-                      background: "var(--header3)",
-                    }}
-                  >
-                    BSS NAME
-                  </th>
-                  <th
-                    style={{
-                      background: "var(--header3)",
-                    }}
-                  >
-                    BSS TYPE
-                  </th>
-                  <th
-                    style={{
-                      background: "var(--header3)",
-                    }}
-                  >
-                    BSS PHONE
-                  </th>
-                  <th
-                    style={{
-                      background: "var(--header3)",
-                    }}
-                  >
-                    BSS EMAIL
-                  </th>
-                  <th
-                    style={{
-                      background: "var(--header3)",
-                    }}
-                  >
-                    COUNTY NAME
-                  </th>
-                  <th
-                    style={{
-                      background: "var(--header3)",
-                    }}
-                  >
-                    CITY NAME
-                  </th>
-                  <th
-                    style={{
-                      background: "var(--header3)",
-                    }}
-                  >
-                    STREET NAME
-                  </th>
-                  <th
-                    style={{
-                      background: "var(--header3)",
-                    }}
-                  >
-                    CONTACT PERSON
-                  </th>
-                  <th
-                    style={{
-                      background: "var(--header3)",
-                    }}
-                  >
-                    BUSS USERNAME
-                  </th>
-                </tr>
-                <tr>
-                  <th></th>
-                  <th></th>
-                  <th></th>
-                  <th></th>
-                  <th></th>
-                  <th></th>
-                  <th></th>
+                  <th>BSS NAME</th>
+                  <th>BSS TYPE</th>
+                  <th>BSS PHONE</th>
+                  <th>BSS EMAIL</th>
+                  <th>COUNTY NAME</th>
+                  <th>CITY NAME</th>
+                  <th>STREET NAME</th>
                   <th>
+                    CONTACT PERSON
                     <table>
-                      <thead
-                        style={{
-                          background: "var(--header3)",
-                        }}
-                      >
+                      <thead>
                         <tr>
                           <th>FNAME</th>
                           <th>LNAME</th>
@@ -109,7 +64,9 @@ const AdminUsers = () => {
                       </thead>
                     </table>
                   </th>
-                  <th></th>
+                  <th>BUSS USERNAME</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
                 </tr>
               </thead>
               <tbody>
@@ -135,6 +92,23 @@ const AdminUsers = () => {
                       </table>
                     </td>
                     <td>{data.bussUsername}</td>
+                    <td>
+                      <button className="utility-btn edit" onClick={handleEdit}>
+                        <span>
+                          <FaEdit />
+                        </span>
+                      </button>
+                    </td>
+                    <td>
+                      <button
+                        className="utility-btn delete"
+                        onClick={handleDelete}
+                      >
+                        <span>
+                          <FaTrash />
+                        </span>
+                      </button>
+                    </td>
                   </tr>
                 ))}
               </tbody>

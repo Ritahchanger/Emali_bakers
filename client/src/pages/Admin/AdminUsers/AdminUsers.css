@@ -8,11 +8,11 @@
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
 }
 
-.admin-dashboard .users-container .table-wrapper{
-    padding:10px;
-    box-shadow:0 0 5PX rgba(0, 0, 0, 0.5);
-    max-height:calc(100vh - 60px);
-    overflow-y: scroll;
+.admin-dashboard .users-container .table-wrapper {
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  max-height: calc(100vh - 60px);
+  overflow-y: scroll;
 }
 
 .admin-dashboard {
@@ -20,4 +20,27 @@
 }
 .admin-dashboard .users-container table thead {
   background: var(--redPink);
+}
+
+.admin-dashboard .users-container th,
+td {
+  padding: 8px;
+  text-align: left;
+  border: 1px so lid #ddd;
+}
+
+.admin-dashboard .users-container .utility-btn.delete {
+  background: var(--redPink);
+  border: none;
+}
+.admin-dashboard .users-container .utility-btn span {
+  color: var(--white);
+}
+.admin-dashboard .users-container .utility-btn.edit {
+  background: var(--colorGreen);
+}
+
+.admin-dashboard .users-container th {
+  background-color: var(--header3);
+  color: white;
 }
