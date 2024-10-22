@@ -88,7 +88,7 @@ SAFARICOM_CONSUMER_SECRET=
 
 SAFARICOM_STK_PUSH_PASS_KEY=
 
-LIPA_NA_MPESA_URL=https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processreques
+LIPA_NA_MPESA_URL=https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest
 
 ```
 
