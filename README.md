@@ -31,6 +31,20 @@ The retailers can pay for their orders using secure online payment gateways such
 
 The system is still under development, and additional features are being implemented.
 
+## Screenshots
+
+## `Home page`
+
+![Food Screen 1](client/src/screenshots/foodScreen1.png)
+
+## `Shopping cart page`
+
+![Food Screen 2](client/src/screenshots/foodscreen2.png)
+
+## `Users admin page`
+
+![Food Screen 3](client/src/screenshots/foodsreen3.png)
+
 ## Running the Available Features Locally
 
 To run this project locally, follow these steps:
@@ -41,28 +55,34 @@ To run this project locally, follow these steps:
    git clone https://github.com/Ritahchanger/Emali_bakers.git
    cd Emali_bakers
 
+   ```
+
 2. **Install dependencies:**
 
 ### for client
+
 cd client
 npm install
 
 ### server
+
 cd ../server
 npm install
 
 2. **For environment variables:**
 
-`create a .env file in the server folder and add the following `
+create a .env file in the server folder and add the following `
 
-`MONGO_URI=mongodb://127.0.0.1:27017/emali_bakers`
-`JWT_SECRET=your_jwt_secret`
-`PORT=5000`
-`MPESA_CONSUMER_KEY=your_mpesa_consumer_key`
-`MPESA_CONSUMER_SECRET=your_mpesa_consumer_secret`
-`STRIPE_SECRET_KEY=your_stripe_secret_key`
-`FIREBASE_CREDENTIALS=your_firebase_credentials`
+```javascript
+MONGO_URI=mongodb://127.0.0.1:27017/emali_bakers
+JWT_SECRET=your_jwt_secret
+PORT=5000
+MPESA_CONSUMER_KEY=your_mpesa_consumer_key
+MPESA_CONSUMER_SECRET=your_mpesa_consumer_secret
+STRIPE_SECRET_KEY=your_stripe_secret_key
+FIREBASE_CREDENTIALS=your_firebase_credentials
+```
 
 3. **Run the application:**
-inside the client folder run `npm run start`
-inside the backend folder run `npm run dev`
+   inside the client folder run `npm run start`
+   inside the backend folder run `npm run dev`
