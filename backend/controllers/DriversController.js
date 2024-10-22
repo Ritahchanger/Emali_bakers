@@ -77,7 +77,41 @@ const createDriver = async (req,res,next) =>{
 }
 
 
+const addRoute = async (req, res, next) => {
+    try {
+        const { id } = req.params;
+        const { routes } = req.body; 
+
+        if (!id) {
+            return res.status(400).json({ status: 400, success: false, message: 'No driver ID provided' });
+        }
+
+      
+        const driver = await Driver.findById(id);
+        if (!driver) {
+            return res.status(404).json({ status: 404, success: false, message: "Driver not found" });
+        }
+
+    
+        if (!routes || (Array.isArray(routes) && routes.length === 0)) {
+            return res.status(400).json({ status: 400, success: false, message: "No routes provided" });
+        }
+
+      
+        if (Array.isArray(routes)) {
+            driver.routes.push(...routes); 
+        } else {
+            driver.routes.push(routes); 
+        }
+
+        await driver.save();
+
+        return res.status(201).json({ status: true, message: 'Driver updated successfully', driver });
+
+    } catch (error) {
+        next(error); 
+    }
+};
 
 
-
-module.exports = { getDrivers,createDriver }
+module.exports = { getDrivers,createDriver,addRoute,getDrivers}
