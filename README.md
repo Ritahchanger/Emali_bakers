@@ -77,10 +77,19 @@ create a .env file in the server folder and add the following `
 MONGO_URI=mongodb://127.0.0.1:27017/emali_bakers
 JWT_SECRET=your_jwt_secret
 PORT=5000
-MPESA_CONSUMER_KEY=your_mpesa_consumer_key
-MPESA_CONSUMER_SECRET=your_mpesa_consumer_secret
-STRIPE_SECRET_KEY=your_stripe_secret_key
-FIREBASE_CREDENTIALS=your_firebase_credentials
+
+STRIPE_SECRET_KEY=
+
+FIREBASE_CREDENTIALS=
+
+SAFARICOM_CONSUMER_KEY=
+
+SAFARICOM_CONSUMER_SECRET=
+
+SAFARICOM_STK_PUSH_PASS_KEY=
+
+LIPA_NA_MPESA_URL=https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processreques
+
 ```
 
 3. **Run the application:**
