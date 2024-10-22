@@ -113,5 +113,26 @@ const addRoute = async (req, res, next) => {
     }
 };
 
+const deleteDriver = async (req,res,next) =>{
+    try{
 
-module.exports = { getDrivers,createDriver,addRoute,getDrivers}
+        const {  id }  = req.params;
+
+        if (!id) {
+            return res.status(400).json({ status: 400, success: false, message: 'No driver ID provided' });
+        }
+
+        const deletedDriver = await Driver.findByIdAndDelete(id);
+
+        if(!deleteDriver){
+            return res.status(400).json({ status: 400, success: false, message: 'There was a problem deleting the driver' });
+        }
+        res.status(200).json({success:true,status:200,message:"Data deleted successfully"});
+
+    }catch(error){
+        next(error)
+    }
+}
+
+
+module.exports = { getDrivers,createDriver,addRoute,getDrivers,deleteDriver}
