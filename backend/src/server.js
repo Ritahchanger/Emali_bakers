@@ -48,6 +48,8 @@ const CartRoute = require("../routes/CartRoute");
 
 const DarajaPaymentRoute = require("../routes/DarajaPaymentRoute")
 
+const DriverRoute = require("../routes/DriverRoute");
+
 
 app.get('/',(req,res)=>{
 
@@ -63,6 +65,7 @@ app.use('/api/business',ProductRoute);
 
 app.use('/api/cart',CartRoute);
 
+app.use('/api/drivers',DriverRoute);
 
 app.use('/api/payments/daraja/pay',DarajaPaymentRoute);
 

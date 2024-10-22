@@ -44,6 +44,7 @@ const officialSchema = new mongoose.Schema({
     },
 }, { timestamps: true });
 
+
 const Official = mongoose.model("Official", officialSchema);
 
 module.exports = Official;

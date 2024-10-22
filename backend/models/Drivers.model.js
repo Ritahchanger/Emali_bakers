@@ -34,7 +34,7 @@ const driverSchema = new mongoose.Schema({
         trim:true,
     },
 
-    Route:[
+    routes:[
         {
             type:String,
             required:true,
