@@ -3,29 +3,21 @@ import { IoIosArrowDropdownCircle } from "react-icons/io";
 import "./AdminNavbar.css";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-
 import { toggleSidebar } from "../../../Redux/Features/AdminSidebarSlice";
-
 import { IoSearch } from "react-icons/io5";
 import { useState } from "react";
-
 const AdminNavbar = () => {
   const dispatch = useDispatch();
-
   const handleDisplaySidebar = () => {
     dispatch(toggleSidebar());
   };
-
   const isSidebarOpen = useSelector(
     (state) => state.adminSidebar.displaySidebar
   );
-
   const [dropdown, setDropdown] = useState(false);
-
   const handleDropdown = () => {
     setDropdown((prev) => !prev);
   };
-
   return (
     <>
       <div className=" admin navbar">
@@ -63,7 +55,6 @@ const AdminNavbar = () => {
             <button
               className={`dropdown-arrow ${dropdown ? "active" : ""}`}
               onClick={handleDropdown}
-  
             >
               <span>
                 <IoIosArrowDropdownCircle />
@@ -72,7 +63,7 @@ const AdminNavbar = () => {
             <div className={`drop-down ${dropdown ? "active" : ""}`}>
               <ul>
                 <li>
-                  <Link to="#">Profile</Link>
+                  <Link to="/account/profile">Profile</Link>
                 </li>
                 <li>
                   <Link to="/">Home</Link>

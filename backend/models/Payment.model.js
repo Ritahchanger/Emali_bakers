@@ -73,7 +73,7 @@ const PaymentSchema = new mongoose.Schema({
         }
     },
 
-    strifeDetails:{
+    stripeDetails:{
 
         chargeId:{
 

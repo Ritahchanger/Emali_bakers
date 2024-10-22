@@ -46,6 +46,7 @@ const ProductRoute = require("../routes/ProductRoute");
 
 const CartRoute = require("../routes/CartRoute");
 
+const DarajaPaymentRoute = require("../routes/DarajaPaymentRoute")
 
 
 app.get('/',(req,res)=>{
@@ -61,6 +62,9 @@ app.use('/api/auth/business',BusinessRoute);
 app.use('/api/business',ProductRoute);
 
 app.use('/api/cart',CartRoute);
+
+
+app.use('/api/payments/daraja/pay',DarajaPaymentRoute);
 
 
 app.listen(PORT, async ()=>{
