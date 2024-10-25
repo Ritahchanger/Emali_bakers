@@ -99,6 +99,20 @@ const loginBusiness = async (req,res,next) =>{
         const token = jwt.sign({id:business._id,username:business.userName},process.env.JWT_SECRET,{expiresIn:"1h"})
 
 
+        res.cookie('token',token,{
+
+            httpOnly:true,
+
+            secure:process.env.NODE_ENV === "production",
+
+
+            sameSite:"Strict",
+
+            maxAge:3600000
+
+        })
+
+
         return res.status(200).json({status:200, success:true, message:"LoggedIn successfully",token:token})
 
 
