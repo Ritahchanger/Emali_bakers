@@ -126,4 +126,7 @@ const loginBusiness = async (req,res,next) =>{
 }
 
 
+
+
+
 module.exports = { registerBusiness,loginBusiness };

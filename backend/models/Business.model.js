@@ -59,6 +59,12 @@ const BusinessSchema = new mongoose.Schema({
     type: [String],
     enum: ["mon", "tue", "wed", "thu", "fri"],
   },
+  resetPasswordToken:{
+    type:String
+  },
+  resetPasswordExpires:{
+    type:String
+  }
 });
 
 
