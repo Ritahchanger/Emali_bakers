@@ -90,6 +90,8 @@ SAFARICOM_STK_PUSH_PASS_KEY=
 
 LIPA_NA_MPESA_URL=https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest
 
+NODE_ENV=
+
 ```
 
 ## Run the application: ##
