@@ -33,15 +33,15 @@ The system is still under development, and additional features are being impleme
 
 ## Screenshots
 
-## `Home page`
+## Home page
 
 ![Food Screen 1](client/src/screenshots/foodScreen1.png)
 
-## `Shopping cart page`
+## Shopping cart page
 
 ![Food Screen 2](client/src/screenshots/foodscreen2.png)
 
-## `Users admin page`
+## Users admin page
 
 ![Food Screen 3](client/src/screenshots/foodsreen3.png)
 
@@ -49,7 +49,7 @@ The system is still under development, and additional features are being impleme
 
 To run this project locally, follow these steps:
 
-1. **Clone the repository:**
+**Clone the repository:**
 
    ```bash
    git clone https://github.com/Ritahchanger/Emali_bakers.git
@@ -57,7 +57,7 @@ To run this project locally, follow these steps:
 
    ```
 
-2. **Install dependencies:**
+**Install dependencies:**
 
 ### for client
 
@@ -69,7 +69,7 @@ npm install
 cd ../server
 npm install
 
-2. **For environment variables:**
+**For environment variables:**
 
 create a .env file in the server folder and add the following `
 
@@ -92,6 +92,13 @@ LIPA_NA_MPESA_URL=https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processreques
 
 ```
 
-3. **Run the application:**
-   inside the client folder run `npm run start`
-   inside the backend folder run `npm run dev`
+## Run the application: ##
+**inside the client folder**
+```
+npm run start
+```
+**inside the client folder**
+   inside the backend folder 
+```
+npm run dev
+```
