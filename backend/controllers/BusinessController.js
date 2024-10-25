@@ -4,6 +4,12 @@ const bcrypt = require("bcrypt");
 
 const jwt = require('jsonwebtoken');
 
+const ResetToken = require("../models/ResetToken");
+
+
+const { transporter } = require("../utils/Transporter")
+
+
 const registerBusiness = async (req,res,next) =>{
 
     try{
@@ -126,7 +132,71 @@ const loginBusiness = async (req,res,next) =>{
 }
 
 
+const forgetPassword = async (req,res,next) =>{
+
+    try{
+
+        const { businessEmail } = req.body;
+
+        if(!businessEmail){
+
+            return res.status(400).json({success:false,message:'Email is required'});
+
+        }
+
+        const business = await Business.findOne({businessEmail});
+
+        if(!business){
+
+            return  res.status(404).json({success:false, message:'No business found with that email'})
+
+        }
+
+        const resetToken = crypto.randomBytes(32).toString('hex');
+
+        const hashedToken = await bcrypt.hash(resetToken,10);
+
+        const expirationTime = Date.now() + 5 * 60 * 1000;
+
+        const resetTokenDoc = new ResetToken({
+
+            token:hashedToken,
+
+            businessId:business._id,
+            
+            expires:new Date(expirationTime),
+
+        })
+
+        await resetTokenDoc.save();
+
+        const resetUrl = `${process.env.FRONTEND_URL}/reset-password/${resetToken}`;
+
+        const message = `
+            <h1>Password Reset Request</h1>
+            <p>You requested a password reset for your account.</p>
+            <p>Please click the link below to reset your password (valid for 5 minutes):</p>
+            <a href="${resetUrl}" clicktracking=off>${resetUrl}</a>
+        `;
+
+        await transporter.sendMail({
+
+            to:businessEmail,
+
+            subject:'Password Reset Request',
+            html:message
+    
+        })
+
+        return res.status(200).json({success:true,message:'Reset link sent to your email'})
+
+    }catch(error){
+
+
+    }
+
+}
 
 
 
-module.exports = { registerBusiness,loginBusiness };
+module.exports = { registerBusiness,loginBusiness,forgetPassword };
