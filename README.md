@@ -60,13 +60,15 @@ To run this project locally, follow these steps:
 **Install dependencies:**
 
 ### for client
-
+```
 cd client
 npm install
+```
 
 ### server
-
+```bash
 cd ../server
+```
 npm install
 
 **For environment variables:**
@@ -75,7 +77,9 @@ create a .env file in the server folder and add the following `
 
 ```javascript
 MONGO_URI=mongodb://127.0.0.1:27017/emali_bakers
+
 JWT_SECRET=your_jwt_secret
+
 PORT=5000
 
 STRIPE_SECRET_KEY=
@@ -91,6 +95,12 @@ SAFARICOM_STK_PUSH_PASS_KEY=
 LIPA_NA_MPESA_URL=https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest
 
 NODE_ENV=
+
+EMAIL=
+
+EMAIL_PASSWORD = 
+
+FRONTEND_URL=http://localhost:3000/ or of your choise
 
 ```
 

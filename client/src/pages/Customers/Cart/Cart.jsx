@@ -35,7 +35,6 @@ const Cart = () => {
     <div className="cart">
       <Navbar />
       <div className="container">
-        <p className="empty"></p>
         <div className="row">
           <CartItems />
           <Summary />

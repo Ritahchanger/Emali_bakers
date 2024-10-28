@@ -1,0 +1,44 @@
+.customer-information .row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  text-align: center;
+}
+.customer-information .input-group {
+  margin: 0.7rem 0rem;
+}
+
+.customer-information select,
+.customer-information input {
+  height: 40px;
+
+  padding: 8px;
+
+  border-radius: 3px;
+
+  border: 2px solid #a9a9a9;
+}
+.customer-information .row .input-group {
+  flex-basis: 48%;
+}
+.customer-information .row.checkout-navigation {
+  margin-top: 2rem;
+}
+
+
+@media(max-width:414px){
+    .customer-information .row{
+        flex-direction: column;
+    }
+
+    .customer-information .row .input-group {
+    width:100%;
+      }
+    .customer-information .row.checkout-navigation .hero-btn{
+        margin-top:2rem;
+    }
+
+}

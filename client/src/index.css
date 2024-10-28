@@ -3,7 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "outfit", sans-serif;
+  /* font-family: "outfit", sans-serif; */
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -62,8 +63,8 @@ body {
     radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
     radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
     radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
-    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%); */
-  /* filter: blur(100px) saturate(150%); */
+    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%); 
+  filter: blur(100px) saturate(150%); */
 }
 
 ::-webkit-scrollbar {
@@ -116,6 +117,13 @@ img {
 
   padding: 0.5rem 2rem;
   cursor: pointer;
+  border:none;
+  border:2px solid var(--maroon);
+  transition:all 0.5s;
+}
+.hero-btn:hover{
+  color:var(--maroon);
+  background:transparent;
 }
 .submit-btn {
   background: var(--maroon);
@@ -147,6 +155,10 @@ img {
 }
 .price {
   font-size: var(--mobileFont);
+}
+.subtitle{
+  font-size:1.5rem;
+  margin:0.7rem 0rem;
 }
 .card button {
   border: none;
@@ -255,10 +267,6 @@ img {
   color: var(--redPink);
   transition: all 0.5s;
 }
-.empty {
-  padding-top: 70px;
-}
-
 @media (max-width: 716px) {
   .arrow-icon {
     width: 40px;
@@ -283,7 +291,11 @@ img {
 .close-button:hover {
   cursor: pointer;
 }
-.main-button {
+.main-button{
+  border:none;
+}
+.main-button a{
+  display:block;
   border: none;
   background: var(--maroon);
   color: var(--white);
@@ -325,5 +337,12 @@ table td {
   table p {
     font-size: 12px;
     font-weight: 600;
+  }
+}
+
+
+@media(max-width:674px){
+  .subtitle{
+    font-size:1.5rem;
   }
 }

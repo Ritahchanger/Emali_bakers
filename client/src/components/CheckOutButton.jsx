@@ -2,7 +2,11 @@ import React from "react";
 import axios from "axios";
 import Config from "../Config";
 import { useDispatch, useSelector } from "react-redux";
-import { closePreloader, openPreloader } from "../Redux/Features/PreloaderSlice";
+import {
+  closePreloader,
+  openPreloader,
+} from "../Redux/Features/PreloaderSlice";
+import { Link } from "react-router-dom";
 
 const CheckOutButton = ({ cartItems }) => {
   const dispatch = useDispatch();
@@ -42,9 +46,10 @@ const CheckOutButton = ({ cartItems }) => {
     <button
       className="main-button"
       onClick={handlePayment}
-      disabled={displayPreloader} // Disable button while loading
+      // disabled={displayPreloader}
     >
-      {displayPreloader ? "Processing..." : "PROCEED TO CHECKOUT"}
+      <Link to="/customer/checkout">PROCEED TO CHECKOUT</Link>
+      {/* {displayPreloader ? "Processing..." : "PROCEED TO CHECKOUT"} */}
     </button>
   );
 };

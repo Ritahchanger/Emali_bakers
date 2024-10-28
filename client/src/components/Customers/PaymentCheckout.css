@@ -1,0 +1,17 @@
+.payment-checkout {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+
+  padding: 10px;
+}
+
+.payment-checkout .row.button {
+  display: flex;
+  flex-direction: row;
+}
+
+.payment-checkout .payment-buttons {
+  border: none;
+  flex-basis: 48%;
+  padding: 0.6rem;
+  cursor: pointer;
+}

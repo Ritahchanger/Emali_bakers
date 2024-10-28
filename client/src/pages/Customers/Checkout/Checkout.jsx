@@ -1,9 +1,19 @@
 import Navbar from "../../../components/Customers/Navbar";
 import Footer from "../../../components/Customers/Footer";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import CustomerInformationCheckout from "../../../components/Customers/CustomerInformationCheckout";
+
+import "./Checkout.css";
+import PaymentCheckout from "../../../components/Customers/PaymentCheckout";
 
 const Checkout = () => {
+  const [paymentMethod, setPaymentMethod] = useState("safaricom");
+
+  const handleSetPaymentMethod = (howToPay) => {
+    setPaymentMethod(howToPay);
+  };
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -13,9 +23,24 @@ const Checkout = () => {
   }, []);
 
   return (
-    <div className="check-out">
+    <div
+      className="check-out"
+      style={{
+        background: "#FFF",
+      }}
+    >
       <Navbar />
-      <p className="empty">LOREM</p>
+      <div className="container checkout">
+        <div className="customer-information">
+          <CustomerInformationCheckout />
+        </div>
+        <div className="customer-information">
+          <PaymentCheckout
+            handleSetPaymentMethod={handleSetPaymentMethod}
+            paymentMethod={paymentMethod}
+          />
+        </div>
+      </div>
       <Footer />
     </div>
   );
