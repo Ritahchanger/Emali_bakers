@@ -7,7 +7,10 @@ const jwt = require('jsonwebtoken');
 const ResetToken = require("../models/ResetToken");
 
 
-const { transporter } = require("../utils/Transporter")
+const { transporter } = require("../utils/Transporter");
+
+
+const crypto = require('crypto')
 
 
 const registerBusiness = async (req,res,next) =>{
@@ -170,10 +173,13 @@ const forgetPassword = async (req,res,next) =>{
 
         })
 
+
         await resetTokenDoc.save();
 
-        const resetUrl = `${process.env.FRONTEND_URL}/reset-password/${6747384}`;
-        // const resetUrl = `${process.env.FRONTEND_URL}/reset-password/${resetToken}`;
+        console.log("Token saved")
+
+        // const resetUrl = `${process.env.FRONTEND_URL}/reset-password/${6747384}`;
+        const resetUrl = `${process.env.FRONTEND_URL}/reset-password/${resetToken}`;
 
         console.log("Message ready to sent")
 
@@ -199,6 +205,7 @@ const forgetPassword = async (req,res,next) =>{
 
     }catch(error){
 
+        next(error)
 
     }
 
