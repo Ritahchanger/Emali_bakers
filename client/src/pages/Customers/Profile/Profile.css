@@ -55,7 +55,8 @@
   gap: 10px;
 }
 .profile .container .account-details .grid .card {
-  padding: 10px;
+  padding: 8px;
+ 
 }
 .profile .container .account-details .grid .card .header {
   border-bottom: 1px solid var(--darkGray);

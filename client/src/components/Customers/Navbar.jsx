@@ -210,7 +210,7 @@ const Navbar = () => {
                   <button>Login</button>
                 </Link>
                 <Link to={adminDashboard.path}>
-                  <button>Admin</button>
+                  {/* <button>Admin</button> */}
                 </Link>
               </div>
             )}

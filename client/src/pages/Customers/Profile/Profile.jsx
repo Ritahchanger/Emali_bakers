@@ -14,6 +14,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import SearchModal from "../../../components/Customers/modals/SearchModal";
 
+import { Edit } from "lucide-react";
+
 import {
   faUserCircle,
   faBox,
@@ -122,8 +124,16 @@ const Profile = () => {
               <div className="card">
                 <p className="header">ACCOUNT DETAILS</p>
                 <div className="profile-footer">
-                  <p>Dennis Peter</p>
-                  <p>peterdennis573@gmail.com</p>
+                  <div className="custom-row">
+                    {" "}
+                    <p>Dennis Peter</p>
+                    <Edit size={20} />
+                  </div>
+
+                  <div className="custom-row">
+                    <p>peterdennis573@gmail.com</p>
+                    <Edit size={20} />
+                  </div>
                 </div>
               </div>
               <div className="card">

@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   /* font-family: "outfit", sans-serif; */
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:'Outfit',sans-serif;
 }
 
 body {
@@ -310,6 +310,11 @@ img {
 .admin-dashboard {
   /* background: #f2f2f2; */
   width:100%;
+}
+.custom-row{
+  display: flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
 /* Existing table styles */

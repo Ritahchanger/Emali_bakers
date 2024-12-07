@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
 const initialState = {
 
     editModalShown:false,
@@ -12,7 +11,7 @@ const initialState = {
 
 const editModalSlice = createSlice({
 
-    name:editModal,
+    name:"editModal",
 
     initialState,
 
