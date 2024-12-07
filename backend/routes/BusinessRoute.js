@@ -15,5 +15,7 @@ Router.post('/register',BusinessController.registerBusiness)
 
 Router.post('/login',BusinessController.loginBusiness)
 
+Router.post('/forgot/password',BusinessController.forgetPassword)
+
 
 module.exports = Router;

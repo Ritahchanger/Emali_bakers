@@ -138,6 +138,8 @@ const forgetPassword = async (req,res,next) =>{
 
         const { businessEmail } = req.body;
 
+        console.log(businessEmail)
+
         if(!businessEmail){
 
             return res.status(400).json({success:false,message:'Email is required'});
@@ -170,7 +172,10 @@ const forgetPassword = async (req,res,next) =>{
 
         await resetTokenDoc.save();
 
-        const resetUrl = `${process.env.FRONTEND_URL}/reset-password/${resetToken}`;
+        const resetUrl = `${process.env.FRONTEND_URL}/reset-password/${6747384}`;
+        // const resetUrl = `${process.env.FRONTEND_URL}/reset-password/${resetToken}`;
+
+        console.log("Message ready to sent")
 
         const message = `
             <h1>Password Reset Request</h1>
@@ -178,6 +183,8 @@ const forgetPassword = async (req,res,next) =>{
             <p>Please click the link below to reset your password (valid for 5 minutes):</p>
             <a href="${resetUrl}" clicktracking=off>${resetUrl}</a>
         `;
+
+        console.log()
 
         await transporter.sendMail({
 
