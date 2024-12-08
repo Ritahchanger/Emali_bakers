@@ -9,6 +9,8 @@ const createProduct = async (req, res, next) => {
 
         const images = req.files;
 
+        console.log(images)
+
         const existingProduct = await Product.findOne({ productName: productName.toLowerCase() });
 
         if (existingProduct) {
@@ -93,6 +95,48 @@ const getProducts = async (req,res,next) =>{
 }
 
 
+const deleteProduct = async (req,res,next) =>{
+
+    try{
+
+        const { productId } = req.params;
+
+        const product = await Product.findById(productId)
+
+        if(!product){
+
+            return res.status(200).json({status:404,success:false,message:"Product not found"})
+
+        }
+
+        const deleteFilePromises = product.images.map(async(image)=>{
+
+            const fileRef = bucket.file(`products/${image.fileName}`);
+
+            const [exists] = await fileRef.exists();
+
+            if(exists){
+
+                await fileRef.delete();
+
+            }
+
+        });
+
+        await Promise.all(deleteFilePromises);
+
+        await Product.findByIdAndDelete(productId);
+
+        return res.status(200).json({success:true,message:"Product and it's associated files deleted successfully"})
+
+
+    }catch(error){
+        next(error)
+    }
+
+}
+
+
 const getProductById = async (req,res,next) =>{
 
     try{
@@ -119,4 +163,4 @@ const getProductById = async (req,res,next) =>{
 
 }
 
-module.exports = { createProduct,getProductById,getProducts };
+module.exports = { createProduct,getProductById,getProducts,deleteProduct};

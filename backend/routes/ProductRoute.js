@@ -19,6 +19,11 @@ Router.get('/get/products',ProductController.getProducts)
 Router.get("/get/product/:id",ProductController.getProductById)
 
 
+Router.delete("/delete/:productId",ProductController.deleteProduct)
+
+Router.delete("")
+
+
 module.exports = Router
 
 
